@@ -1,4 +1,6 @@
 // Data do casamento
+console.log("JavaScript carregou!");
+
 const dataCasamento = new Date(2026, 7, 16, 16, 0, 0).getTime();
 
 
