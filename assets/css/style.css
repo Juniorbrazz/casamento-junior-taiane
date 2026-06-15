@@ -27,7 +27,9 @@ body {
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    gap: 40px;
+    gap: 12px;
+
+    padding:20px
 }
 
 /* Remove espaçamentos padrão */
