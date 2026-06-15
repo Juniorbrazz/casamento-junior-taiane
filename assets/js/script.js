@@ -2,7 +2,7 @@
 
 console.log("JavaScript carregou!");
 
-const dataCasamento = new Date("August 16, 2026 16:00:00").getTime();
+const dataCasamento = new Date("August 16, 2027 16:00:00").getTime();
 
 
 function atualizarContador() {
