@@ -49,8 +49,10 @@ p {
 #contador {
     display: flex;
     justify-content: center;
+    align-items: center;
     gap: 15px;
-    flex-wrap: wrap;
+    flex-direction: row;
+    flex-wrap: nowrap;
 }
 
 .tempo {
