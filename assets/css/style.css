@@ -31,7 +31,7 @@ body {
     width: 100%;
 }
 
-/* 🔥 TOPO LADO A LADO COM ESPAÇO */
+/* 🔥 TOPO (AGORA FUNCIONA DE VERDADE) */
 .info-topo {
     display: flex;
     flex-direction: row;
@@ -42,16 +42,18 @@ body {
     text-align: center;
 }
 
-/* bloco esquerdo (nome + data) */
+/* 🔥 NOME + DATA LADO A LADO */
 .bloco-esquerdo {
     display: flex;
-    flex-direction: column;
-    gap: 5px;
+    flex-direction: row;
     align-items: center;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
     padding: 10px;
 }
 
-/* bloco direito (frase) */
+/* FRASE */
 .bloco-direito {
     max-width: 320px;
     padding: 10px;
@@ -89,6 +91,7 @@ h2 {
     gap: 10px;
 }
 
+/* caixa contador */
 #contador {
     display: flex;
     gap: 15px;
