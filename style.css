@@ -1,1 +1,46 @@
+/* Importando uma fonte elegante */
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Montserrat:wght@300;400;500&display=swap');
 
+
+/* Configurações gerais do site */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    background-color: #f8f3ee;
+    color: #4a3a32;
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 4rem;
+    color: #b56e5a; /* Terra cota */
+    margin-bottom: 15px;
+}
+
+
+h2 {
+    font-size: 1.6rem;
+    color: #8a6b5a;
+    margin-bottom: 25px;
+}
+
+
+p {
+    font-size: 1.2rem;
+    max-width: 600px;
+    line-height: 1.7;
+    padding: 0 20px;
+}
