@@ -38,8 +38,15 @@ body {
     text-align: center;
 }
 
-/* 🔥 AQUI ESTÁ O QUE FAZ FICAR LADO A LADO */
+/* bloco esquerdo (AGORA CORRETO) */
 .bloco-esquerdo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* 🔥 ISSO AQUI FAZ h1 + h2 FICAREM LADO A LADO */
+.nome-data {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -48,12 +55,7 @@ body {
     flex-wrap: wrap;
 }
 
-/* frase */
-.bloco-direito {
-    max-width: 320px;
-}
-
-/* reset */
+/* remove margem padrão */
 h1, h2, h3, p {
     margin: 0;
 }
@@ -119,6 +121,11 @@ h2 {
     .info-topo {
         flex-direction: column;
         gap: 15px;
+    }
+
+    .nome-data {
+        flex-direction: column;
+        gap: 5px;
     }
 
     h1 {
