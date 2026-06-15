@@ -1,5 +1,5 @@
 // Data do casamento
-const dataCasamento = new Date("August 16, 2026 16:00:00").getTime();
+const dataCasamento = new Date(2026, 7, 16, 16, 0, 0).getTime();
 
 
 function atualizarContador() {
