@@ -25,12 +25,9 @@ body {
 /* Container principal (PC: lado a lado) */
 .container {
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 20px;
-    max-width: 1000px;
-    width: 100%;
+    gap: 80px;
     padding: 20px;
 }
 
