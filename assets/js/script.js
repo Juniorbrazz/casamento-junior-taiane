@@ -1,6 +1,39 @@
-// ===================================================
-// SITE DE CASAMENTO - JUNIOR & TAIANE
-// Arquivo responsável pelas funcionalidades do site
-// ===================================================
+// Data do casamento
+const dataCasamento = new Date("August 16, 2026 16:00:00").getTime();
 
-console.log("Site Junior & Taiane carregado com sucesso!");
+
+function atualizarContador() {
+
+    const agora = new Date().getTime();
+
+    const diferenca = dataCasamento - agora;
+
+
+    const dias = Math.floor(diferenca / (1000 * 60 * 60 * 24));
+
+    const horas = Math.floor(
+        (diferenca % (1000 * 60 * 60 * 24))
+        / (1000 * 60 * 60)
+    );
+
+    const minutos = Math.floor(
+        (diferenca % (1000 * 60 * 60))
+        / (1000 * 60)
+    );
+
+
+    const segundos = Math.floor(
+        (diferenca % (1000 * 60))
+        / 1000
+    );
+
+
+    document.getElementById("contador").innerHTML =
+        `${dias} dias | ${horas} horas | ${minutos} minutos | ${segundos} segundos`;
+}
+
+
+setInterval(atualizarContador, 1000);
+
+
+atualizarContador();
