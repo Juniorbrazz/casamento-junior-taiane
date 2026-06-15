@@ -21,7 +21,7 @@ body {
     align-items: center;
 }
 
-/* Container geral */
+/* Container */
 .container {
     display: flex;
     flex-direction: column;
@@ -31,7 +31,7 @@ body {
     width: 100%;
 }
 
-/* 🔥 TOPO (AGORA FUNCIONA DE VERDADE) */
+/* TOPO */
 .info-topo {
     display: flex;
     flex-direction: row;
@@ -42,18 +42,16 @@ body {
     text-align: center;
 }
 
-/* 🔥 NOME + DATA LADO A LADO */
+/* bloco esquerdo */
 .bloco-esquerdo {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    gap: 5px;
     align-items: center;
-    justify-content: center;
-    gap: 25px;
-    flex-wrap: wrap;
     padding: 10px;
 }
 
-/* FRASE */
+/* bloco direito */
 .bloco-direito {
     max-width: 320px;
     padding: 10px;
@@ -91,7 +89,6 @@ h2 {
     gap: 10px;
 }
 
-/* caixa contador */
 #contador {
     display: flex;
     gap: 15px;
@@ -128,7 +125,7 @@ h2 {
     margin-top: 5px;
 }
 
-/* 📱 RESPONSIVO */
+/* 📱 RESPONSIVO CELULAR */
 @media (max-width: 768px) {
 
     .info-topo {
