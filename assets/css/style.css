@@ -148,3 +148,25 @@ h2 {
         font-size: 1.8rem;
     }
 }
+.info-topo {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 60px;
+    flex-wrap: wrap;
+}
+
+/* coloca h1 h2 juntos visualmente em linha */
+.bloco-esquerdo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+}
+
+/* força h1 e h2 ficarem mais “colados visualmente” */
+.bloco-esquerdo h1,
+.bloco-esquerdo h2 {
+    margin: 0;
+}
