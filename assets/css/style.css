@@ -15,23 +15,43 @@ body {
     font-family: 'Montserrat', sans-serif;
     text-align: center;
     min-height: 100vh;
+    padding: 10px;
 
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 10px;
 }
 
-/* Container principal */
+/* Container geral */
 .container {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-    gap: 20px;
+    gap: 30px;
     max-width: 1000px;
     width: 100%;
     padding: 20px;
+}
+
+/* TOPO LADO A LADO */
+.info-topo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 60px;
+    text-align: center;
+}
+
+/* bloco nome + data */
+.bloco-texto {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+/* frase */
+.bloco-frase {
+    max-width: 300px;
 }
 
 /* Remove margens padrão */
@@ -55,13 +75,15 @@ h2 {
 /* Texto */
 p {
     font-size: 1.2rem;
-    max-width: 600px;
     line-height: 1.7;
 }
 
 /* Contador */
 .contador {
-    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
 }
 
 .contador h3 {
@@ -75,10 +97,9 @@ p {
     align-items: center;
     gap: 15px;
     flex-wrap: wrap;
-    margin-top: 10px;
 }
 
-/* Blocos */
+/* blocos do tempo */
 .tempo {
     background: #b56e5a;
     color: white;
@@ -94,13 +115,13 @@ p {
     flex-shrink: 0;
 }
 
-/* Números */
+/* números */
 .tempo span {
     font-size: 2.2rem;
     font-weight: 700;
 }
 
-/* Label */
+/* label */
 .tempo p {
     font-size: 0.9rem;
     text-transform: uppercase;
@@ -108,8 +129,13 @@ p {
     margin-top: 5px;
 }
 
-/* 📱 Responsivo */
+/* 📱 RESPONSIVO */
 @media (max-width: 768px) {
+
+    .info-topo {
+        flex-direction: column;
+        gap: 15px;
+    }
 
     h1 {
         font-size: 2.5rem;
@@ -122,10 +148,6 @@ p {
     p {
         font-size: 1rem;
         padding: 0 10px;
-    }
-
-    #contador {
-        justify-content: center;
     }
 
     .tempo {
