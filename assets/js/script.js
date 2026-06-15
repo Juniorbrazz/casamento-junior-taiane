@@ -31,8 +31,10 @@ function atualizarContador() {
     );
 
 
-    document.getElementById("contador").innerHTML =
-        `${dias} dias | ${horas} horas | ${minutos} minutos | ${segundos} segundos`;
+   document.getElementById("dias").innerHTML = dias;
+document.getElementById("horas").innerHTML = horas;
+document.getElementById("minutos").innerHTML = minutos;
+document.getElementById("segundos").innerHTML = segundos;
 }
 
 
