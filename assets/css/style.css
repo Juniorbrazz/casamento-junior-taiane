@@ -21,15 +21,17 @@ body {
     align-items: center;
 }
 
-/* Container */
+/* Container geral */
 .container {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 25px;
+    gap: 30px;
+    max-width: 1000px;
+    width: 100%;
 }
 
-/* 🔥 TOPO (NOME + DATA LADO A LADO NO PC) */
+/* 🔥 TOPO LADO A LADO COM ESPAÇO */
 .info-topo {
     display: flex;
     flex-direction: row;
@@ -40,32 +42,46 @@ body {
     text-align: center;
 }
 
-/* Remove espaçamento padrão que quebra tudo */
+/* bloco esquerdo (nome + data) */
+.bloco-esquerdo {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    align-items: center;
+    padding: 10px;
+}
+
+/* bloco direito (frase) */
+.bloco-direito {
+    max-width: 320px;
+    padding: 10px;
+}
+
+/* remove margens padrão */
 h1, h2, h3, p {
     margin: 0;
 }
 
-/* Nome */
+/* título */
 h1 {
     font-family: 'Cormorant Garamond', serif;
     font-size: 4rem;
     color: #b56e5a;
 }
 
-/* Data */
+/* data */
 h2 {
     font-size: 1.6rem;
     color: #8a6b5a;
 }
 
-/* Frase */
+/* frase */
 .frase {
     font-size: 1.2rem;
-    max-width: 300px;
     line-height: 1.7;
 }
 
-/* Contador */
+/* contador */
 .contador {
     display: flex;
     flex-direction: column;
@@ -80,13 +96,14 @@ h2 {
     justify-content: center;
 }
 
-/* Blocos do tempo */
+/* blocos tempo */
 .tempo {
     background: #b56e5a;
     color: white;
     width: 110px;
     height: 110px;
     border-radius: 18px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
 
     display: flex;
     flex-direction: column;
@@ -100,17 +117,20 @@ h2 {
     font-weight: 700;
 }
 
-/* texto pequeno */
+/* label */
 .tempo p {
     font-size: 0.9rem;
     text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-top: 5px;
 }
 
-/* 📱 CELULAR */
+/* 📱 RESPONSIVO */
 @media (max-width: 768px) {
 
     .info-topo {
         flex-direction: column;
+        gap: 15px;
     }
 
     h1 {
@@ -123,10 +143,15 @@ h2 {
 
     .frase {
         font-size: 1rem;
+        padding: 0 10px;
     }
 
     .tempo {
         width: 90px;
         height: 90px;
+    }
+
+    .tempo span {
+        font-size: 1.8rem;
     }
 }
