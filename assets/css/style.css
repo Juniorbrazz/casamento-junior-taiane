@@ -18,17 +18,16 @@ body {
     align-items: center;
 }
 
-/* CONTAINER */
 .container {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 30px;
-    max-width: 1000px;
     width: 100%;
+    max-width: 1000px;
 }
 
-/* 🔥 TOPO LADO A LADO */
+/* TOPO */
 .info-topo {
     display: flex;
     flex-direction: row;
@@ -39,20 +38,22 @@ body {
     text-align: center;
 }
 
-/* BLOCO ESQUERDO */
+/* 🔥 AQUI ESTÁ O SEGREDO */
 .bloco-esquerdo {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
-    gap: 5px;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
 }
 
-/* BLOCO DIREITO */
+/* frase */
 .bloco-direito {
     max-width: 320px;
 }
 
-/* textos sem margem */
+/* reset */
 h1, h2, h3, p {
     margin: 0;
 }
@@ -91,7 +92,6 @@ h2 {
     justify-content: center;
 }
 
-/* blocos tempo */
 .tempo {
     background: #b56e5a;
     color: white;
@@ -115,7 +115,6 @@ h2 {
     font-size: 0.9rem;
     text-transform: uppercase;
     letter-spacing: 2px;
-    margin-top: 5px;
 }
 
 /* 📱 CELULAR */
@@ -136,7 +135,6 @@ h2 {
 
     .frase {
         font-size: 1rem;
-        padding: 0 10px;
     }
 
     .tempo {
@@ -147,26 +145,4 @@ h2 {
     .tempo span {
         font-size: 1.8rem;
     }
-}
-.info-topo {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    gap: 60px;
-    flex-wrap: wrap;
-}
-
-/* coloca h1 h2 juntos visualmente em linha */
-.bloco-esquerdo {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 5px;
-}
-
-/* força h1 e h2 ficarem mais “colados visualmente” */
-.bloco-esquerdo h1,
-.bloco-esquerdo h2 {
-    margin: 0;
 }
