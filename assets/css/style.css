@@ -1,1 +1,104 @@
-/* Fonte elegante */ @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Montserrat:wght@300;400;500&display=swap'); /* Reset */ * { margin: 0; padding: 0; box-sizing: border-box; } /* Fundo e centralização */ body { background-color: #f8f3ee; color: #4a3a32; font-family: 'Montserrat', sans-serif; text-align: center; min-height: 100vh; display: flex; justify-content: center; align-items: center; } /* Container principal */ .container { display: flex; flex-direction: column; align-items: center; gap: 18px; padding: 20px; } /* Título */ h1 { font-family: 'Cormorant Garamond', serif; font-size: 4rem; color: #b56e5a; } /* Data */ h2 { font-size: 1.6rem; color: #8a6b5a; } /* Texto */ p { font-size: 1.2rem; max-width: 600px; line-height: 1.7; } /* Contador */ .contador { margin-top: 20px; } .contador h3 { margin-bottom: 15px; font-size: 1.2rem; } /* Caixa do contador */ #contador { display: flex; justify-content: center; align-items: center; gap: 15px; } /* Blocos de tempo */ .tempo { background: #b56e5a; color: white; width: 110px; height: 110px; border-radius: 18px; box-shadow: 0 8px 20px rgba(0,0,0,0.15); display: flex; flex-direction: column; justify-content: center; align-items: center; } /* Números */ .tempo span { font-size: 2.2rem; font-weight: 700; } /* Texto pequeno */ .tempo p { font-size: 0.9rem; margin-top: 5px; text-transform: uppercase; letter-spacing: 2px; }
+/* Fonte elegante */
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Montserrat:wght@300;400;500&display=swap');
+
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Fundo */
+body {
+    background-color: #f8f3ee;
+    color: #4a3a32;
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Container */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+
+    padding: 20px;
+}
+
+/* Remove espaçamentos padrão */
+h1, h2, h3, p {
+    margin: 0;
+}
+
+/* Título */
+h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 4rem;
+    color: #b56e5a;
+}
+
+/* Data */
+h2 {
+    font-size: 1.6rem;
+    color: #8a6b5a;
+}
+
+/* Texto */
+p {
+    font-size: 1.2rem;
+    max-width: 600px;
+    line-height: 1.7;
+}
+
+/* Contador */
+.contador {
+    margin-top: 10px;
+}
+
+.contador h3 {
+    font-size: 1.2rem;
+}
+
+/* Caixa do contador */
+#contador {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+/* Blocos */
+.tempo {
+    background: #b56e5a;
+    color: white;
+    width: 110px;
+    height: 110px;
+    border-radius: 18px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Números */
+.tempo span {
+    font-size: 2.2rem;
+    font-weight: 700;
+}
+
+/* Label */
+.tempo p {
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-top: 5px;
+}
