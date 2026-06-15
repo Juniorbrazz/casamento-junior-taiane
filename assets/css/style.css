@@ -43,7 +43,7 @@ p {
 /* CONTADOR */
 
 .contador {
-    margin-top: 1000px !important;
+    margin-top: 150px !important;
 }
 
 #contador {
@@ -53,6 +53,7 @@ p {
     gap: 15px;
     flex-direction: row;
     flex-wrap: nowrap;
+    margin-top: 30px;
 }
 
 .tempo {
