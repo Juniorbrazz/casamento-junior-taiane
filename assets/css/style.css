@@ -14,70 +14,58 @@ body {
     color: #4a3a32;
     font-family: 'Montserrat', sans-serif;
     min-height: 100vh;
-    padding: 10px;
+    padding: 20px;
 
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-/* Container geral */
+/* Container */
 .container {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 35px;
-    max-width: 1000px;
-    width: 100%;
+    gap: 25px;
 }
 
-/* TOPO */
+/* 🔥 TOPO (NOME + DATA LADO A LADO NO PC) */
 .info-topo {
     display: flex;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
-    gap: 60px;
-    width: 100%;
-}
-
-/* bloco esquerdo */
-.bloco-esquerdo {
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
+    gap: 40px;
+    flex-wrap: wrap;
     text-align: center;
 }
 
-/* bloco direito */
-.bloco-direito {
-    max-width: 300px;
-}
-
-/* textos sem margem */
+/* Remove espaçamento padrão que quebra tudo */
 h1, h2, h3, p {
     margin: 0;
 }
 
-/* título */
+/* Nome */
 h1 {
     font-family: 'Cormorant Garamond', serif;
     font-size: 4rem;
     color: #b56e5a;
 }
 
-/* data */
+/* Data */
 h2 {
     font-size: 1.6rem;
     color: #8a6b5a;
 }
 
-/* frase */
+/* Frase */
 .frase {
     font-size: 1.2rem;
+    max-width: 300px;
     line-height: 1.7;
 }
 
-/* contador */
+/* Contador */
 .contador {
     display: flex;
     flex-direction: column;
@@ -85,33 +73,25 @@ h2 {
     gap: 10px;
 }
 
-.contador h3 {
-    font-size: 1.2rem;
-}
-
-/* caixa contador */
 #contador {
     display: flex;
-    justify-content: center;
-    align-items: center;
     gap: 15px;
     flex-wrap: wrap;
+    justify-content: center;
 }
 
-/* blocos tempo */
+/* Blocos do tempo */
 .tempo {
     background: #b56e5a;
     color: white;
     width: 110px;
     height: 110px;
     border-radius: 18px;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
 
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    flex-shrink: 0;
 }
 
 /* números */
@@ -120,21 +100,17 @@ h2 {
     font-weight: 700;
 }
 
-/* label */
+/* texto pequeno */
 .tempo p {
     font-size: 0.9rem;
     text-transform: uppercase;
-    letter-spacing: 2px;
-    margin-top: 5px;
 }
 
-/* 📱 RESPONSIVO */
+/* 📱 CELULAR */
 @media (max-width: 768px) {
 
     .info-topo {
         flex-direction: column;
-        text-align: center;
-        gap: 15px;
     }
 
     h1 {
@@ -147,15 +123,10 @@ h2 {
 
     .frase {
         font-size: 1rem;
-        padding: 0 10px;
     }
 
     .tempo {
         width: 90px;
         height: 90px;
-    }
-
-    .tempo span {
-        font-size: 1.8rem;
     }
 }
