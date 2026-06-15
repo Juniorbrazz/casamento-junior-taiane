@@ -13,7 +13,6 @@ body {
     background-color: #f8f3ee;
     color: #4a3a32;
     font-family: 'Montserrat', sans-serif;
-    text-align: center;
     min-height: 100vh;
     padding: 10px;
 
@@ -27,55 +26,38 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 30px;
-    max-width: 1000px;
+    gap: 35px;
     width: 100%;
-    padding: 20px;
+    max-width: 1000px;
 }
 
-/* TOPO LADO A LADO */
+/* TOPO LADO A LADO (PC) */
 .info-topo {
     display: flex;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
     gap: 60px;
-    text-align: center;
+    text-align: left;
 }
 
-/* bloco nome + data */
-.bloco-texto {
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-}
-
-/* frase */
-.bloco-frase {
-    max-width: 300px;
-}
-
-/* Remove margens padrão */
-h1, h2, h3, p {
-    margin: 0;
-}
-
-/* Título */
+/* títulos e texto */
 h1 {
     font-family: 'Cormorant Garamond', serif;
     font-size: 4rem;
     color: #b56e5a;
 }
 
-/* Data */
 h2 {
     font-size: 1.6rem;
     color: #8a6b5a;
+    margin-top: 5px;
 }
 
-/* Texto */
-p {
+.frase {
     font-size: 1.2rem;
     line-height: 1.7;
+    max-width: 300px;
 }
 
 /* Contador */
@@ -99,7 +81,7 @@ p {
     flex-wrap: wrap;
 }
 
-/* blocos do tempo */
+/* blocos */
 .tempo {
     background: #b56e5a;
     color: white;
@@ -134,6 +116,7 @@ p {
 
     .info-topo {
         flex-direction: column;
+        text-align: center;
         gap: 15px;
     }
 
@@ -145,7 +128,7 @@ p {
         font-size: 1.2rem;
     }
 
-    p {
+    .frase {
         font-size: 1rem;
         padding: 0 10px;
     }
