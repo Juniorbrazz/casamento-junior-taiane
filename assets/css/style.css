@@ -31,36 +31,45 @@ body {
     max-width: 1000px;
 }
 
-/* TOPO LADO A LADO (PC) */
+/* 🔥 TOPO LADO A LADO (CORRIGIDO DE VERDADE) */
 .info-topo {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     gap: 60px;
-    text-align: left;
+    width: 100%;
 }
 
-/* títulos e texto */
+/* impede quebra estranha */
+.info-topo h1,
+.info-topo h2,
+.info-topo p {
+    margin: 0;
+    width: auto;
+}
+
+/* TÍTULO */
 h1 {
     font-family: 'Cormorant Garamond', serif;
     font-size: 4rem;
     color: #b56e5a;
 }
 
+/* DATA */
 h2 {
     font-size: 1.6rem;
     color: #8a6b5a;
-    margin-top: 5px;
 }
 
+/* FRASE */
 .frase {
     font-size: 1.2rem;
     line-height: 1.7;
     max-width: 300px;
 }
 
-/* Contador */
+/* CONTADOR */
 .contador {
     display: flex;
     flex-direction: column;
@@ -72,7 +81,7 @@ h2 {
     font-size: 1.2rem;
 }
 
-/* Caixa do contador */
+/* CAIXA DO CONTADOR */
 #contador {
     display: flex;
     justify-content: center;
@@ -81,7 +90,7 @@ h2 {
     flex-wrap: wrap;
 }
 
-/* blocos */
+/* BLOCO TEMPO */
 .tempo {
     background: #b56e5a;
     color: white;
@@ -97,13 +106,13 @@ h2 {
     flex-shrink: 0;
 }
 
-/* números */
+/* NÚMEROS */
 .tempo span {
     font-size: 2.2rem;
     font-weight: 700;
 }
 
-/* label */
+/* LABEL */
 .tempo p {
     font-size: 0.9rem;
     text-transform: uppercase;
@@ -116,6 +125,7 @@ h2 {
 
     .info-topo {
         flex-direction: column;
+        align-items: center;
         text-align: center;
         gap: 15px;
     }
