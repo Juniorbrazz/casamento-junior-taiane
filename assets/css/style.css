@@ -88,8 +88,9 @@ h2 {
 }
 
 .contador h3 {
-    font-size: 1.6rem;
-    color: #4a3a32;
+    font-size: 1.8rem;
+    color: #6b564b;
+    font-weight: 500;
 }
 
 /* Caixas do contador */
