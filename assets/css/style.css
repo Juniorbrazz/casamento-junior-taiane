@@ -71,12 +71,15 @@ h2 {
 /* Frase */
 .frase {
    margin-top: 10px;
-    font-size: 1.4rem;
-    line-height: 1.8;
-    color: #5b4a41;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.8rem;
+    font-style: italic;
+    color: #6b564b;
+    line-height: 1.5;
     text-align: center;
     max-width: 1000px;
     width: 100%;
+    
     position: relative;
     left: 20px;
 }
