@@ -52,9 +52,11 @@ h1, h2, h3, p {
 /* Nome */
 h1 {
     font-family: 'Cormorant Garamond', serif;
-    font-size: 4.8rem;
+    font-size: 5rem;
     font-weight: 600;
     color: #b56e5a;
+    letter-spacing: 1px;
+    line-height: 1;
 }
 
 /* Data */
