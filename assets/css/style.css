@@ -93,11 +93,9 @@ h2 {
 }
 
 .contador h3 {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 2rem;
-    font-weight: 600;
-    color: #8b7568;
-    letter-spacing: 0.5px;
+     font-size: 1.8rem;
+    color: #6b564b;
+    font-weight: 500;
 }
 
 /* Caixas do contador */
