@@ -1,11 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Montserrat:wght@300;400;500&display=swap');
 
+/* Reset */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* Fundo */
 body {
     background-color: #f8f3ee;
     color: #4a3a32;
@@ -18,139 +20,156 @@ body {
     align-items: center;
 }
 
+/* Área principal */
 .container {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 30px;
+    gap: 45px;
     width: 100%;
-    max-width: 1000px;
+    max-width: 1200px;
 }
 
 /* TOPO */
 .info-topo {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 60px;
-    flex-wrap: wrap;
     text-align: center;
 }
 
-/* BLOCO ESQUERDO */
-.bloco-esquerdo {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 8px;
-}
-
-/* 🔥 ISSO AQUI É O QUE RESOLVE */
+/* Nome + Data lado a lado */
 .nome-data {
     display: flex;
-    flex-direction: row;
-    align-items: center;
     justify-content: center;
-    gap: 25px;
+    align-items: center;
+    gap: 35px;
     flex-wrap: wrap;
 }
 
-/* remove margem padrão */
+/* Remove margens */
 h1, h2, h3, p {
     margin: 0;
 }
 
-/* título */
+/* Nome */
 h1 {
     font-family: 'Cormorant Garamond', serif;
-    font-size: 4rem;
+    font-size: 4.8rem;
+    font-weight: 600;
     color: #b56e5a;
 }
 
-/* data */
+/* Data */
 h2 {
-    font-size: 1.6rem;
-    color: #8a6b5a;
+    font-size: 1.8rem;
+    color: #7a6559;
+    border-left: 2px solid #b56e5a;
+    padding-left: 35px;
+    font-weight: 400;
 }
 
-/* frase */
+/* Frase */
 .frase {
-    font-size: 1.2rem;
-    line-height: 1.7;
-    max-width: 320px;
+    margin-top: 35px;
+    font-size: 1.4rem;
+    line-height: 1.8;
+    max-width: 600px;
+    color: #5b4a41;
 }
 
-/* contador */
+/* Contador */
 .contador {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 10px;
+    gap: 18px;
 }
 
+.contador h3 {
+    font-size: 1.6rem;
+    color: #4a3a32;
+}
+
+/* Caixas do contador */
 #contador {
     display: flex;
-    gap: 15px;
-    flex-wrap: wrap;
     justify-content: center;
+    gap: 18px;
+    flex-wrap: wrap;
 }
 
 .tempo {
-    background: #b56e5a;
+    width: 120px;
+    height: 120px;
+    background-color: #b56e5a;
     color: white;
-    width: 110px;
-    height: 110px;
-    border-radius: 18px;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    border-radius: 20px;
 
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
 }
 
 .tempo span {
-    font-size: 2.2rem;
+    font-size: 2.5rem;
     font-weight: 700;
 }
 
 .tempo p {
+    margin-top: 8px;
     font-size: 0.9rem;
+    letter-spacing: 2px;
     text-transform: uppercase;
 }
 
-/* 📱 CELULAR */
+/* CELULAR */
 @media (max-width: 768px) {
 
-    .info-topo {
-        flex-direction: column;
-        gap: 20px;
+    body {
+        padding: 15px;
     }
 
     .nome-data {
         flex-direction: column;
-        gap: 5px;
+        gap: 12px;
     }
 
     h1 {
-        font-size: 2.5rem;
+        font-size: 3rem;
     }
 
     h2 {
-        font-size: 1.2rem;
+        border-left: none;
+        padding-left: 0;
+        font-size: 1.3rem;
     }
 
     .frase {
-        font-size: 1rem;
-        text-align: center;
+        margin-top: 20px;
+        font-size: 1.1rem;
+        max-width: 90%;
+    }
+
+    .contador h3 {
+        font-size: 1.3rem;
+    }
+
+    #contador {
+        gap: 10px;
     }
 
     .tempo {
-        width: 90px;
-        height: 90px;
+        width: 85px;
+        height: 85px;
     }
 
     .tempo span {
         font-size: 1.8rem;
+    }
+
+    .tempo p {
+        font-size: 0.7rem;
+        letter-spacing: 1px;
     }
 }
