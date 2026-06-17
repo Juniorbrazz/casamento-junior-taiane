@@ -28,6 +28,9 @@ body {
     gap: 35px;
     width: 100%;
     max-width: 1200px;
+
+    animation: aparecer 1.5s ease-out;
+    will-change: transform, opacity;
 }
 
 /* TOPO */
@@ -57,6 +60,8 @@ h1 {
     color: #b56e5a;
     letter-spacing: 1px;
     line-height: 1;
+    transition: 0.4s ease;
+    
 }
 
 /* Data */
