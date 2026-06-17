@@ -205,3 +205,6 @@ h2 {
         transform: translateY(0);
     }
 }
+h1:hover {
+    letter-spacing: 3.5px;
+}
