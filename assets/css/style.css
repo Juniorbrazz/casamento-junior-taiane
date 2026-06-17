@@ -150,6 +150,12 @@ h1:hover {
 /* CELULAR */
 @media (max-width: 768px) {
 
+    .foto-casal img {
+    width: 230px;
+    height: 230px;
+    border-radius: 16px;
+}
+    
     body {
         padding: 15px;
     }
