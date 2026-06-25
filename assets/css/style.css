@@ -243,3 +243,108 @@ h1:hover {
     transform: scale(1.04);
     box-shadow: 0 30px 70px rgba(0,0,0,0.25);
 }
+
+/* ======================================================= */
+/* ESTILOS DA ETAPA 1: SEÇÃO DO LOCAL                      */
+/* ======================================================= */
+
+.card-local {
+    background-color: #ffffff;
+    padding: 40px 30px;
+    border-radius: 25px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.08);
+    border: 1px solid #ebdcd0;
+    text-align: center;
+    max-width: 600px;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.titulo-local {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2.2rem;
+    font-weight: 600;
+    color: #b56e5a;
+    margin-bottom: 15px;
+}
+
+.nome-local {
+    font-size: 1.3rem;
+    font-weight: 500;
+    color: #4a3a32;
+    margin-bottom: 8px;
+}
+
+.endereco-texto {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #8b7568;
+    margin-bottom: 30px;
+}
+
+.botoes-mapa {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+}
+
+.btn-mapa {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    width: 100%;
+    max-width: 320px;
+    padding: 14px 20px;
+    border-radius: 12px;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: 0.3s ease;
+}
+
+.btn-maps {
+    background-color: #ffffff;
+    color: #4a3a32;
+    border: 1px solid #c49a8b;
+}
+
+.btn-maps:hover {
+    background-color: #fcfaf7;
+    transform: translateY(-2px);
+}
+
+.btn-waze {
+    background-color: #33fff3;
+    color: #2c3e50;
+    border: none;
+}
+
+.btn-waze:hover {
+    background-color: #2ce6dc;
+    transform: translateY(-2px);
+}
+
+.btn-mapa img {
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
+}
+
+/* Ajuste para telas menores */
+@media (max-width: 768px) {
+    .card-local {
+        padding: 30px 20px;
+        width: 95%;
+    }
+    .titulo-local {
+        font-size: 1.8rem;
+    }
+    .nome-local {
+        font-size: 1.15rem;
+    }
+    .endereco-texto {
+        font-size: 0.9rem;
+    }
+}
