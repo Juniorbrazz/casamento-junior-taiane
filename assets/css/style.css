@@ -327,7 +327,4 @@ body footer .rodape-links .link-mapa img {
         flex-direction: row; /* Alterado de column para row */
         gap: 20px;           /* Mantém um espaçamento legal entre os dois */
     }
-    *.divisor {
-        display: none; /* Pode apagar esse bloco se quiser a barrinha de volta no celular */
-    }*
 }
