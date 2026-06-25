@@ -324,8 +324,8 @@ body footer .rodape-links .link-mapa img {
         font-size: 1.3rem;
     }
     .rodape-links {
-        flex-direction: column;
-        gap: 12px;
+        flex-direction: row; /* Alterado de column para row */
+        gap: 20px;           /* Mantém um espaçamento legal entre os dois */
     }
     .divisor {
         display: none;
