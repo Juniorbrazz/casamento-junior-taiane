@@ -297,8 +297,8 @@ h1:hover {
     text-decoration: underline;
 }
 
-/* Alvo específico e rigoroso para forçar os ícones a ficando pequenos */
-body footer .rodape-links .link-mapa img {
+/* Alvo específico e rigoroso para forçar os ícones a ficando pequenos (PC e Celular) */
+.container .rodape-local .rodape-links .link-mapa img {
     width: 18px !important;
     height: 18px !important;
     max-width: 18px !important;
