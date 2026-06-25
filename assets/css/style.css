@@ -14,7 +14,6 @@ body {
     font-family: 'Montserrat', sans-serif;
     min-height: 100vh;
     padding: 20px;
-
     display: flex;
     justify-content: center;
     align-items: center;
@@ -28,7 +27,6 @@ body {
     gap: 35px;
     width: 100%;
     max-width: 1200px;
-
     animation: aparecer 2.0s ease-out;
     will-change: transform, opacity;
 }
@@ -113,15 +111,12 @@ h2 {
     background: linear-gradient(145deg, #b56e5a, #9d5c4b);
     color: white;
     border-radius: 25px;
-
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
     transition: 0.6s ease;
     cursor: default;
-
     box-shadow: 0 15px 35px rgba(0,0,0,0.18);
 }
 
@@ -149,12 +144,11 @@ h1:hover {
 
 /* CELULAR */
 @media (max-width: 768px) {
-
     .foto-casal img {
-    width: 230px;
-    height: 230px;
-    border-radius: 16px;
-}
+        width: 230px;
+        height: 230px;
+        border-radius: 16px;
+    }
     
     body {
         padding: 15px;
@@ -213,7 +207,6 @@ h1:hover {
         opacity: 0;
         transform: translateY(25px);
     }
-
     to {
         opacity: 1;
         transform: translateY(0);
@@ -230,12 +223,9 @@ h1:hover {
     width: 320px;
     height: 320px;
     object-fit: cover;
-
     border-radius: 18px;
     border: 3px solid #b56e5a;
-
     box-shadow: 0 20px 50px rgba(0,0,0,0.18);
-
     transition: 0.6s ease;
 }
 
@@ -248,47 +238,37 @@ h1:hover {
 /* ESTILOS DA ETAPA 1: RODAPÉ DO LOCAL                     */
 /* ======================================================= */
 
-/* Força o container principal a aceitar o rodapé abaixo dele */
-.container {
-    width: 100%;
-    max-width: 1200px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 35px;
-}
-
 .rodape-local {
     width: 100%;
-    margin-top: 50px;
+    margin-top: 20px;
     padding-top: 25px;
     border-top: 1px dashed #c49a8b;
     text-align: center;
 }
 
 .rodape-conteudo {
-    max-width: 800px;
+    max-width: 600px;
     margin: 0 auto;
 }
 
 .rodape-titulo {
     font-family: 'Cormorant Garamond', serif;
-    font-size: 1.6rem;
+    font-size: 1.5rem;
     font-weight: 600;
     color: #b56e5a;
-    margin-bottom: 8px;
+    margin-bottom: 6px;
     letter-spacing: 0.5px;
 }
 
 .rodape-nome-local {
-    font-size: 1.05rem;
+    font-size: 1rem;
     font-weight: 500;
     color: #4a3a32;
     margin-bottom: 4px;
 }
 
 .rodape-endereco {
-    font-size: 0.9rem;
+    font-size: 0.85rem;
     color: #8b7568;
     margin-bottom: 15px;
 }
@@ -297,11 +277,14 @@ h1:hover {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 15px;
+    gap: 20px;
 }
 
 .link-mapa {
-    font-size: 0.9rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.85rem;
     color: #b56e5a;
     text-decoration: none;
     font-weight: 500;
@@ -313,6 +296,19 @@ h1:hover {
     text-decoration: underline;
 }
 
+/* Alvo específico e rigoroso para forçar os ícones a ficando pequenos */
+body footer .rodape-links .link-mapa img {
+    width: 18px !important;
+    height: 18px !important;
+    max-width: 18px !important;
+    max-height: 18px !important;
+    object-fit: contain !important;
+    transform: none !important;
+    box-shadow: none !important;
+    border: none !important;
+    border-radius: 0 !important;
+}
+
 .divisor {
     color: #c49a8b;
     font-size: 0.9rem;
@@ -321,7 +317,7 @@ h1:hover {
 /* Ajuste Responsivo para Celular */
 @media (max-width: 768px) {
     .rodape-local {
-        margin-top: 35px;
+        margin-top: 25px;
         padding-top: 20px;
     }
     .rodape-titulo {
@@ -329,9 +325,9 @@ h1:hover {
     }
     .rodape-links {
         flex-direction: column;
-        gap: 8px;
+        gap: 12px;
     }
     .divisor {
-        display: none; /* Esconde a barra vertical no celular */
+        display: none;
     }
 }
