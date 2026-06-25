@@ -187,17 +187,18 @@ h1:hover {
     }
 
     .tempo {
-        width: 85px;
-        height: 85px;
+        width: 72px;        /* Diminuído para caber na mesma linha */
+        height: 72px;       /* Diminuído para caber na mesma linha */
+        border-radius: 15px; /* Suaviza as bordas no tamanho menor */
     }
 
     .tempo span {
-        font-size: 1.8rem;
+        font-size: 1.4rem;  /* Fonte menor para o número não vazar */
     }
 
     .tempo p {
-        font-size: 0.7rem;
-        letter-spacing: 1px;
+        font-size: 0.6rem;  /* Fonte menor para o texto (Dias, Horas...) */
+        letter-spacing: 0.5px;
     }
 }
 
