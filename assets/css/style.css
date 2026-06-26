@@ -55,7 +55,8 @@ body {
     width: 100%;
     max-width: 1200px;
     /* Mudamos para uma animação direta e mais segura */
-    animation: subirSuave 1.5s cubic-bezier(0.25, 1, 0.5, 1);
+    /* Aumentamos para 2.8s: a subida fica suave, gradual e muito elegante */
+    animation: subirSuave 2.8s cubic-bezier(0.25, 1, 0.5, 1);
     will-change: transform;
 }
 
