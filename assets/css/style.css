@@ -1,7 +1,7 @@
 /* ======================================================= */
 /* 1. VARIÁVEIS GLOBAIS E CONFIGURAÇÕES DE ELITE (:ROOT)   */
 /* ======================================================= */
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght=400;600;700&family=Montserrat:wght@300;400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght=400;600;700&family=Montserrat:wght=300;400;500&display=swap');
 
 :root {
     /* Paleta de Cores */
@@ -16,7 +16,7 @@
     --font-serif: 'Cormorant Garamond', serif;
     --font-sans: 'Montserrat', sans-serif;
     
-    /* Animações e Transições (Física Orgânica) */
+    /* Animações e TransTransitions (Física Orgânica) */
     --transition-smooth: all 0.5s cubic-bezier(0.25, 1, 0.5, 1);
 }
 
@@ -447,28 +447,25 @@ h2 {
 
     .nossa-historia {
         grid-template-columns: 1fr; /* No celular vira uma coluna só */
-        gap: 40px;
+        gap: 30px;
         padding: 20px 0;
     }
     
     .historia-conteudo {
-        text-align: center;
+        text-align: center !important;
     }
     
     .historia-titulo {
         font-size: 2.5rem;
     }
     
-  .historia-texto {
+    .historia-texto {
         font-size: 1rem !important;
-        text-align: center !important; /* Mantém centralizado e organizado */
+        text-align: center !important; /* Força o alinhamento centralizado sem esticar as palavras */
         line-height: 1.7 !important;
-        padding: 0 20px !important; /* Cria um recuo perfeito tanto na esquerda quanto na direita */
-        word-break: break-word !important; /* Se uma palavra for muito longa, ela quebra elegantemente sem empurrar a margem */
-        width: 100% !important; /* Garante que o bloco use toda a largura disponível sem vazar */
+        padding: 0 5px;
     }
     
-    /* AQUI ENTRA SEU NOVO BLOCO ATUALIZADO PARA O CELULAR */
     .historia-grid {
         grid-template-columns: 1fr; /* Uma coluna no celular */
         grid-auto-rows: 240px; /* Altura confortável para fotos no celular */
@@ -477,8 +474,8 @@ h2 {
     
     /* Reseta os efeitos de expansão de linhas/colunas do PC para não quebrar no celular */
     .foto-vertical-1, .foto-vertical-2, .foto-horizontal-1, .foto-horizontal-2, .foto-quadrada-1, .foto-quadrada-2 {
-        grid-row: span 1;
-        grid-column: span 1;
+        grid-row: span 1 !important;
+        grid-column: span 1 !important;
     }
 
     .rodape-local {
