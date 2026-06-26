@@ -1,25 +1,52 @@
+/* ======================================================= */
+/* 1. VARIÁVEIS GLOBAIS E CONFIGURAÇÕES DE ELITE (:ROOT)   */
+/* ======================================================= */
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Montserrat:wght@300;400;500&display=swap');
 
-/* Reset */
+:root {
+    /* Paleta de Cores */
+    --bg-primary: #f8f3ee;
+    --brand-color: #b56e5a;
+    --brand-dark: #9d5c4b;
+    --text-main: #4a3a32;
+    --text-muted: #8b7568;
+    --border-color: #c49a8b;
+    
+    /* Tipografia */
+    --font-serif: 'Cormorant Garamond', serif;
+    --font-sans: 'Montserrat', sans-serif;
+    
+    /* Animações e Transições (Física Orgânica) */
+    --transition-smooth: all 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+/* Reset de Alta Performance */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Fundo */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Fundo e Base da Página */
 body {
-    background-color: #f8f3ee;
-    color: #4a3a32;
-    font-family: 'Montserrat', sans-serif;
+    background-color: var(--bg-primary);
+    color: var(--text-main);
+    font-family: var(--font-sans);
     min-height: 100vh;
-    padding: 60px 20px 20px 20px; /* Aumentado o primeiro valor (topo) de 20px para 60px */
+    padding: 60px 20px 20px 20px;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-/* Área principal */
+/* ======================================================= */
+/* 2. LAYOUT E ESTRUTURA PRINCIPAL                         */
+/* ======================================================= */
+
 .container {
     display: flex;
     flex-direction: column;
@@ -27,16 +54,23 @@ body {
     gap: 35px;
     width: 100%;
     max-width: 1200px;
-    animation: aparecer 2.0s ease-out;
+    animation: aparecer 2.0s cubic-bezier(0.25, 1, 0.5, 1) ease-out;
     will-change: transform, opacity;
 }
 
-/* TOPO */
+/* Remove margens padrão dos elementos de texto */
+h1, h2, h3, p {
+    margin: 0;
+}
+
+/* ======================================================= */
+/* 3. COMPONENTES DO TOPO (INFO-TOPO)                      */
+/* ======================================================= */
+
 .info-topo {
     text-align: center;
 }
 
-/* Nome + Data lado a lado */
 .nome-data {
     display: flex;
     justify-content: center;
@@ -45,32 +79,28 @@ body {
     flex-wrap: wrap;
 }
 
-/* Remove margens */
-h1, h2, h3, p {
-    margin: 0;
-}
-
-/* Nome */
 h1 {
-    font-family: 'Cormorant Garamond', serif;
+    font-family: var(--font-serif);
     font-size: 5rem;
     font-weight: 600;
-    color: #b56e5a;
+    color: var(--brand-color);
     letter-spacing: 1px;
     line-height: 1;
-    transition: 0.6s ease;
+    transition: var(--transition-smooth);
 }
 
-/* Data */
+h1:hover {
+    letter-spacing: 3.5px;
+}
+
 h2 {
     font-size: 1.5rem;
-    color: #8b7568;
-    border-left: 1px solid #c49a8b;
+    color: var(--text-muted);
+    border-left: 1px solid var(--border-color);
     padding-left: 30px;
     font-weight: 400;
 }
 
-/* Frase */
 .frase {
     margin-top: 20px;
     font-size: 1.4rem;
@@ -81,7 +111,35 @@ h2 {
     width: 100%;
 }
 
-/* Contador */
+/* ======================================================= */
+/* 4. COMPONENTE FOTO DO CASAL                             */
+/* ======================================================= */
+
+.foto-casal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.foto-casal img {
+    width: 320px;
+    height: 320px;
+    object-fit: cover;
+    border-radius: 18px;
+    border: 3px solid var(--brand-color);
+    box-shadow: 0 20px 50px rgba(0,0,0,0.18);
+    transition: var(--transition-smooth);
+}
+
+.foto-casal img:hover {
+    transform: scale(1.04);
+    box-shadow: 0 30px 70px rgba(0,0,0,0.25);
+}
+
+/* ======================================================= */
+/* 5. COMPONENTE CONTADOR REGRESSIVO                       */
+/* ======================================================= */
+
 .contador {
     display: flex;
     flex-direction: column;
@@ -90,14 +148,13 @@ h2 {
 }
 
 .contador h3 {
-    font-family: 'Cormorant Garamond', serif;
+    font-family: var(--font-serif);
     font-size: 2rem;
     font-weight: 600;
-    color: #8b7568;
+    color: var(--text-muted);
     letter-spacing: 0.5px;
 }
 
-/* Caixas do contador */
 #contador {
     display: flex;
     justify-content: center;
@@ -108,16 +165,21 @@ h2 {
 .tempo {
     width: 125px;
     height: 125px;
-    background: linear-gradient(145deg, #b56e5a, #9d5c4b);
+    background: linear-gradient(145deg, var(--brand-color), var(--brand-dark));
     color: white;
     border-radius: 25px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    transition: 0.6s ease;
+    transition: var(--transition-smooth);
     cursor: default;
     box-shadow: 0 15px 35px rgba(0,0,0,0.18);
+}
+
+.tempo:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 20px 45px rgba(0,0,0,0.22);
 }
 
 .tempo span {
@@ -132,26 +194,93 @@ h2 {
     text-transform: uppercase;
 }
 
-/* HOVER */
-h1:hover {
-    letter-spacing: 3.5px;
+/* ======================================================= */
+/* 6. COMPONENTE RODAPÉ DO LOCAL                           */
+/* ======================================================= */
+
+.rodape-local {
+    width: 100% !important;
+    margin-top: 20px;
+    padding-top: 25px;
+    border-top: 1px dashed var(--border-color);
+    text-align: center;
 }
 
-.tempo:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 20px 45px rgba(0,0,0,0.22);
+.rodape-conteudo {
+    max-width: 600px;
+    margin: 0 auto;
 }
 
-/* CELULAR */
+.rodape-titulo {
+    font-family: var(--font-serif);
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--brand-color);
+    margin-bottom: 6px;
+    letter-spacing: 0.5px;
+}
+
+.rodape-nome-local {
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--text-main);
+    margin-bottom: 4px;
+}
+
+.rodape-endereco {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    margin-bottom: 15px;
+}
+
+.rodape-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.link-mapa {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.85rem;
+    color: var(--brand-color);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.link-mapa:hover {
+    color: var(--text-main);
+    text-decoration: underline;
+}
+
+/* Alvo rigoroso para travar tamanho dos ícones nos Mapas (PC e Celular) */
+.container .rodape-local .rodape-links .link-mapa img {
+    width: 18px !important;
+    height: 18px !important;
+    max-width: 18px !important;
+    max-height: 18px !important;
+    object-fit: contain !important;
+    transform: none !important;
+    box-shadow: none !important;
+    border: none !important;
+    border-radius: 0 !important;
+}
+
+.divisor {
+    color: var(--border-color);
+    font-size: 0.9rem;
+}
+
+/* ======================================================= */
+/* 7. RESPONSIVIDADE (MOBILE METRICS)                      */
+/* ======================================================= */
+
 @media (max-width: 768px) {
-    .foto-casal img {
-        width: 230px;
-        height: 230px;
-        border-radius: 16px;
-    }
-    
-  body {
-        padding: 45px 15px 15px 15px; /* Aumentado o topo de 15px para 45px no celular */
+    body {
+        padding: 45px 15px 15px 15px;
     }
 
     .nome-data {
@@ -178,6 +307,12 @@ h1:hover {
         padding: 0 10px;
     }
 
+    .foto-casal img {
+        width: 230px;
+        height: 230px;
+        border-radius: 16px;
+    }
+
     .contador h3 {
         font-size: 1.3rem;
     }
@@ -187,23 +322,43 @@ h1:hover {
     }
 
     .tempo {
-        width: 72px;        /* Diminuído para caber na mesma linha */
-        height: 72px;       /* Diminuído para caber na mesma linha */
-        border-radius: 15px; /* Suaviza as bordas no tamanho menor */
+        width: 72px;        
+        height: 72px;       
+        border-radius: 15px; 
     }
 
     .tempo span {
-        font-size: 1.4rem;  /* Fonte menor para o número não vazar */
+        font-size: 1.4rem;  
     }
 
     .tempo p {
-        font-size: 0.6rem;  /* Fonte menor para o texto (Dias, Horas...) */
+        font-size: 0.6rem;  
         letter-spacing: 0.5px;
+    }
+
+    .rodape-local {
+        margin-top: 25px;
+        padding-top: 20px;
+    }
+
+    .rodape-titulo {
+        font-size: 1.3rem;
+    }
+
+    .rodape-links {
+        flex-direction: row; 
+        gap: 20px;           
+    }
+
+    .divisor {
+        display: none; 
     }
 }
 
-/* Animação de entrada */
-@keyframes aparecer {
+/* ======================================================= */
+/* 8. ANIMAÇÕES NATURAIS                                   */
+/* ======================================================= */
+@keyframes desaparecer {
     from {
         opacity: 0;
         transform: translateY(25px);
@@ -211,121 +366,5 @@ h1:hover {
     to {
         opacity: 1;
         transform: translateY(0);
-    }
-}
-
-.foto-casal {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.foto-casal img {
-    width: 320px;
-    height: 320px;
-    object-fit: cover;
-    border-radius: 18px;
-    border: 3px solid #b56e5a;
-    box-shadow: 0 20px 50px rgba(0,0,0,0.18);
-    transition: 0.6s ease;
-}
-
-.foto-casal img:hover {
-    transform: scale(1.04);
-    box-shadow: 0 30px 70px rgba(0,0,0,0.25);
-}
-
-/* ======================================================= */
-/* ESTILOS DA ETAPA 1: RODAPÉ DO LOCAL                     */
-/* ======================================================= */
-
-.rodape-local {
-    width: 100%;
-    margin-top: 20px;
-    padding-top: 25px;
-    border-top: 1px dashed #c49a8b;
-    text-align: center;
-}
-
-.rodape-conteudo {
-    max-width: 600px;
-    margin: 0 auto;
-}
-
-.rodape-titulo {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 1.5rem;
-    font-weight: 600;
-    color: #b56e5a;
-    margin-bottom: 6px;
-    letter-spacing: 0.5px;
-}
-
-.rodape-nome-local {
-    font-size: 1rem;
-    font-weight: 500;
-    color: #4a3a32;
-    margin-bottom: 4px;
-}
-
-.rodape-endereco {
-    font-size: 0.85rem;
-    color: #8b7568;
-    margin-bottom: 15px;
-}
-
-.rodape-links {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
-}
-
-.link-mapa {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    font-size: 0.85rem;
-    color: #b56e5a;
-    text-decoration: none;
-    font-weight: 500;
-    transition: color 0.3s ease;
-}
-
-.link-mapa:hover {
-    color: #4a3a32;
-    text-decoration: underline;
-}
-
-/* Alvo específico e rigoroso para forçar os ícones a ficando pequenos (PC e Celular) */
-.container .rodape-local .rodape-links .link-mapa img {
-    width: 18px !important;
-    height: 18px !important;
-    max-width: 18px !important;
-    max-height: 18px !important;
-    object-fit: contain !important;
-    transform: none !important;
-    box-shadow: none !important;
-    border: none !important;
-    border-radius: 0 !important;
-}
-
-.divisor {
-    color: #c49a8b;
-    font-size: 0.9rem;
-}
-
-/* Ajuste Responsivo para Celular */
-@media (max-width: 768px) {
-    .rodape-local {
-        margin-top: 25px;
-        padding-top: 20px;
-    }
-    .rodape-titulo {
-        font-size: 1.3rem;
-    }
-    .rodape-links {
-        flex-direction: row; /* Alterado de column para row */
-        gap: 20px;           /* Mantém um espaçamento legal entre os dois */
     }
 }
