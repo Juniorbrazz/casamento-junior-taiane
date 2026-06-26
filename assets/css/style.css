@@ -1,7 +1,7 @@
 /* ======================================================= */
 /* 1. VARIÁVEIS GLOBAIS E CONFIGURAÇÕES DE ELITE (:ROOT)   */
 /* ======================================================= */
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght=400;600;700&family=Montserrat:wght@300;400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght=400;600;700&family=Montserrat:wght=300;400;500&display=swap');
 
 :root {
     /* Paleta de Cores */
@@ -515,7 +515,7 @@ h2 {
         border-radius: 15px; 
     }
     
-    .tempo span { font-size: 1.4rem; }
+    ... tempo span { font-size: 1.4rem; }
     .tempo p { font-size: 0.6rem; letter-spacing: 0.5px; }
 
     .nossa-historia {
@@ -531,13 +531,13 @@ h2 {
     
     .historia-titulo { font-size: 2.5rem; }
     
-   .historia-texto {
+    .historia-texto {
         font-size: 1.05rem !important;
-        text-align: justify !important; /* Deixa as bordas esquerda e direita perfeitamente retas */
+        text-align: justify !important; 
         line-height: 1.8 !important;
-        padding: 0 20px !important; /* Afasta o texto das bordas físicas do celular */
-        word-break: keep-all !important; /* Impede quebras de palavras feias no meio da linha */
-        hyphens: auto !important; /* Adiciona hífen elegantemente se uma palavra precisar de quebra */
+        padding: 0 20px !important; 
+        word-break: keep-all !important; 
+        hyphens: auto !important; 
     }
     
     /* CORREÇÃO DO BUG: Força o grid a virar uma coluna limpa e reta no celular */
@@ -562,6 +562,11 @@ h2 {
     .rodape-titulo { font-size: 1.3rem; }
     .rodape-links { flex-direction: row; gap: 20px; }
     .divisor { display: none; }
+
+    /* Ajuste da Seção do Dia Útil no Celular */
+    .dia-titulo { font-size: 2.3rem; }
+    .acordeao-header { font-size: 1.05rem; padding: 15px; }
+    .acordeao-body p { font-size: 0.95rem; }
 }
 
 /* ======================================================= */
