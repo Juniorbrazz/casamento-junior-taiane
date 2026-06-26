@@ -464,12 +464,17 @@ h2 {
         text-align: center;
     }
     
+    /* AQUI ENTRA SEU NOVO BLOCO ATUALIZADO PARA O CELULAR */
     .historia-grid {
+        grid-template-columns: 1fr; /* Uma coluna no celular */
+        grid-auto-rows: 240px; /* Altura confortável para fotos no celular */
         gap: 12px;
     }
     
-    .foto-principal {
-        grid-row: span 1; /* No celular desfaz o efeito vertical pesado */
+    /* Reseta os efeitos de expansão de linhas/colunas do PC para não quebrar no celular */
+    .foto-vertical-1, .foto-vertical-2, .foto-horizontal-1, .foto-horizontal-2, .foto-quadrada-1, .foto-quadrada-2 {
+        grid-row: span 1;
+        grid-column: span 1;
     }
 
     .rodape-local {
