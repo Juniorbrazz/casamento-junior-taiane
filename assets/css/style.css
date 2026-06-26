@@ -361,6 +361,116 @@ h2 {
 .foto-horizontal-2 { grid-column: span 1; }
 
 /* ======================================================= */
+/* 6.8 SEÇÃO O GRANDE DIA (ACORDEÃO PRÁTICO - DESKTOP)     */
+/* ======================================================= */
+
+.grande-dia {
+    width: 100%;
+    padding: 60px 0;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.4); /* Fundo sutil */
+    border-radius: 18px;
+    margin-top: 20px;
+    border-bottom: 1px dashed var(--border-color);
+}
+
+.dia-topo {
+    margin-bottom: 40px;
+}
+
+.dia-subtitulo {
+    font-family: var(--font-sans);
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: var(--brand-color);
+    font-weight: 500;
+}
+
+.dia-titulo {
+    font-family: var(--font-serif);
+    font-size: 3.5rem;
+    font-weight: 600;
+    color: var(--text-main);
+    line-height: 1.1;
+    margin-top: 10px;
+}
+
+/* O Acordeão Visual */
+.acordeao-container {
+    max-width: 800px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.acordeao-item {
+    border-bottom: 1px dashed var(--border-color);
+    margin-bottom: 10px;
+}
+
+.acordeao-header {
+    width: 100%;
+    padding: 20px;
+    background-color: transparent;
+    border: none;
+    text-align: left;
+    font-family: var(--font-sans);
+    font-size: 1.15rem;
+    font-weight: 500;
+    color: var(--text-main);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.acordeao-header:hover {
+    color: var(--brand-color);
+}
+
+.icone-seta {
+    transition: transform 0.4s ease; /* Animação suave para a seta girar */
+    font-size: 1rem;
+    color: var(--brand-color);
+}
+
+.acordeao-body {
+    padding: 0 20px;
+    max-height: 0; /* Começa escondido */
+    overflow: hidden;
+    transition: max-height 0.4s ease, padding 0.4s ease; /* Animação suave de abrir */
+    text-align: left;
+}
+
+/* Regras para o corpo do acordeão quando aberto */
+.acordeao-body p {
+    font-size: 1rem;
+    line-height: 1.8;
+    color: var(--text-main);
+    margin-bottom: 20px; /* Margem entre os parágrafos internos */
+    font-weight: 300;
+}
+
+/* === Classes que o JavaScript vai adicionar === */
+
+/* Quando o botão está ativo (aberto) */
+.acordeao-header.active {
+    color: var(--brand-color);
+}
+
+/* Gira a seta para baixo quando aberto */
+.acordeao-header.active .icone-seta {
+    transform: rotate(90deg);
+}
+
+/* Força a abertura visual (definiremos a altura via JS) */
+.acordeao-body.active {
+    max-height: 500px; /* Altura máxima para animação */
+    padding: 20px;
+}
+
+/* ======================================================= */
 /* 7. RESPONSIVIDADE (MOBILE METRICS)                      */
 /* ======================================================= */
 
