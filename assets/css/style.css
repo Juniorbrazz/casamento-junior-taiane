@@ -54,10 +54,9 @@ body {
     gap: 35px;
     width: 100%;
     max-width: 1200px;
-    opacity: 0; /* Garante que comece invisível antes de subir suavemente */
-    /* Animação Corrigida: Tempo, Curva e Direção de Estado perfeitamente integrados */
-    animation: aparecer 2.2s cubic-bezier(0.25, 1, 0.5, 1) forwards;
-    will-change: transform, opacity;
+    /* Mudamos para uma animação direta e mais segura */
+    animation: subirSuave 1.5s cubic-bezier(0.25, 1, 0.5, 1);
+    will-change: transform;
 }
 
 /* Remove margens padrão dos elementos de texto */
@@ -360,13 +359,11 @@ h2 {
 /* ======================================================= */
 /* 8. ANIMAÇÕES NATURAIS                                   */
 /* ======================================================= */
-@keyframes desaparecer {
-    0% {
-        opacity: 0;
-        transform: translateY(45px); /* Subida suave de 45px */
+@keyframes subirSuave {
+    from {
+        transform: translateY(50px); /* Começa 50px abaixo */
     }
-    100% {
-        opacity: 1;
-        transform: translateY(0); /* Fixa estavelmente no topo original */
+    to {
+        transform: translateY(0); /* Sobe suavemente para a posição original */
     }
 }
