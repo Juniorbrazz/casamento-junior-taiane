@@ -421,12 +421,13 @@ h2 {
     
     .historia-titulo { font-size: 2.5rem; }
     
-    .historia-texto {
-        font-size: 1rem !important;
-        text-align: center !important; 
-        line-height: 1.7 !important;
-        padding: 0 15px !important; /* Cria resguardo lateral perfeito para as quebras */
-        word-break: break-word !important;
+   .historia-texto {
+        font-size: 1.05rem !important;
+        text-align: justify !important; /* Deixa as bordas esquerda e direita perfeitamente retas */
+        line-height: 1.8 !important;
+        padding: 0 20px !important; /* Afasta o texto das bordas físicas do celular */
+        word-break: keep-all !important; /* Impede quebras de palavras feias no meio da linha */
+        hyphens: auto !important; /* Adiciona hífen elegantemente se uma palavra precisar de quebra */
     }
     
     /* CORREÇÃO DO BUG: Força o grid a virar uma coluna limpa e reta no celular */
