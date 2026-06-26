@@ -323,18 +323,19 @@ h2 {
     text-align: justify;
 }
 
-/* O Grid de Fotos Magnífico */
+/* O Grid de Fotos Magnífico (Engenharia para 6 Fotos) */
 .historia-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
+    grid-auto-rows: 180px; /* Define uma altura base para os blocos se encaixarem */
+    gap: 16px;
     width: 100%;
 }
 
 .foto-item {
     overflow: hidden;
     border-radius: 12px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.06);
     transition: var(--transition-smooth);
     background-color: #eee;
 }
@@ -347,25 +348,39 @@ h2 {
     transition: transform 0.8s cubic-bezier(0.25, 1, 0.5, 1);
 }
 
-/* Efeito de Zoom interno de galeria de luxo */
+/* Efeitos de Interação Premium */
 .foto-item:hover {
     transform: translateY(-4px);
-    box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.12);
 }
 
 .foto-item:hover img {
-    transform: scale(1.06);
+    transform: scale(1.05);
 }
 
-/* Foto principal vertical ocupando duas linhas de altura */
-.foto-principal {
-    grid-row: span 2;
-    height: 100%;
+/* Mapeamento de Posições do Grid de Luxo (Design Assimétrico) */
+.foto-vertical-1 {
+    grid-row: span 2; /* Ocupa duas linhas de altura */
 }
 
-/* Esconde as fotos extras por enquanto */
-.foto-oculta {
-    display: none;
+.foto-horizontal-1 {
+    grid-column: span 1;
+}
+
+.foto-quadrada-1 {
+    grid-column: span 1;
+}
+
+.foto-quadrada-2 {
+    grid-column: span 1;
+}
+
+.foto-vertical-2 {
+    grid-row: span 2; /* Cria o contra-peso visual do outro lado */
+}
+
+.foto-horizontal-2 {
+    grid-column: span 1;
 }
 
 /* ======================================================= */
