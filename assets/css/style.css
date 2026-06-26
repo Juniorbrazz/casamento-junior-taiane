@@ -54,8 +54,9 @@ body {
     gap: 35px;
     width: 100%;
     max-width: 1200px;
-    /* Correção da animação: unificando o tempo e a curva suave de subida */
-    animation: aparecer 2.0s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+    opacity: 0; /* Garante que comece invisível antes de subir suavemente */
+    /* Animação Corrigida: Tempo, Curva e Direção de Estado perfeitamente integrados */
+    animation: aparecer 2.2s cubic-bezier(0.25, 1, 0.5, 1) forwards;
     will-change: transform, opacity;
 }
 
@@ -362,10 +363,10 @@ h2 {
 @keyframes desaparecer {
     0% {
         opacity: 0;
-        transform: translateY(40px); /* Começa um pouco mais abaixo para dar mais presença ao movimento */
+        transform: translateY(45px); /* Subida suave de 45px */
     }
     100% {
         opacity: 1;
-        transform: translateY(0); /* Para suavemente no lugar correto */
+        transform: translateY(0); /* Fixa estavelmente no topo original */
     }
 }
