@@ -281,7 +281,7 @@ h2 {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 60px;
-    align-items: center;
+    align-items: start; /* Alinha o topo do texto perfeitamente com o topo das fotos */
     width: 100%;
     padding: 40px 0;
     border-bottom: 1px dashed var(--border-color);
