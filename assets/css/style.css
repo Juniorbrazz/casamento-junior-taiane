@@ -1,7 +1,7 @@
 /* ======================================================= */
 /* 1. VARIÁVEIS GLOBAIS E CONFIGURAÇÕES DE ELITE (:ROOT)   */
 /* ======================================================= */
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght=400;600;700&family=Montserrat:wght=300;400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght=400;600;700&family=Montserrat:wght@300;400;500&display=swap');
 
 :root {
     /* Paleta de Cores */
@@ -16,7 +16,7 @@
     --font-serif: 'Cormorant Garamond', serif;
     --font-sans: 'Montserrat', sans-serif;
     
-    /* Animações e TransTransitions (Física Orgânica) */
+    /* Animações e Transições (Física Orgânica) */
     --transition-smooth: all 0.5s cubic-bezier(0.25, 1, 0.5, 1);
 }
 
@@ -54,8 +54,6 @@ body {
     gap: 35px;
     width: 100%;
     max-width: 1200px;
-    /* Mudamos para uma animação direta e mais segura */
-    /* Aumentamos para 2.8s: a subida fica suave, gradual e muito elegante */
     animation: subirSuave 2.8s cubic-bezier(0.25, 1, 0.5, 1);
     will-change: transform;
 }
@@ -258,7 +256,6 @@ h2 {
     text-decoration: underline;
 }
 
-/* Alvo rigoroso para travar tamanho dos ícones nos Mapas (PC e Celular) */
 .container .rodape-local .rodape-links .link-mapa img {
     width: 18px !important;
     height: 18px !important;
@@ -323,11 +320,10 @@ h2 {
     text-align: justify;
 }
 
-/* O Grid de Fotos Magnífico (Engenharia para 6 Fotos) */
 .historia-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-auto-rows: 180px; /* Define uma altura base para os blocos se encaixarem */
+    grid-auto-rows: 180px; 
     gap: 16px;
     width: 100%;
 }
@@ -348,7 +344,6 @@ h2 {
     transition: transform 0.8s cubic-bezier(0.25, 1, 0.5, 1);
 }
 
-/* Efeitos de Interação Premium */
 .foto-item:hover {
     transform: translateY(-4px);
     box-shadow: 0 15px 40px rgba(0,0,0,0.12);
@@ -358,30 +353,12 @@ h2 {
     transform: scale(1.05);
 }
 
-/* Mapeamento de Posições do Grid de Luxo (Design Assimétrico) */
-.foto-vertical-1 {
-    grid-row: span 2; /* Ocupa duas linhas de altura */
-}
-
-.foto-horizontal-1 {
-    grid-column: span 1;
-}
-
-.foto-quadrada-1 {
-    grid-column: span 1;
-}
-
-.foto-quadrada-2 {
-    grid-column: span 1;
-}
-
-.foto-vertical-2 {
-    grid-row: span 2; /* Cria o contra-peso visual do outro lado */
-}
-
-.foto-horizontal-2 {
-    grid-column: span 1;
-}
+.foto-vertical-1 { grid-row: span 2; }
+.foto-horizontal-1 { grid-column: span 1; }
+.foto-quadrada-1 { grid-column: span 1; }
+.foto-quadrada-2 { grid-column: span 1; }
+.foto-vertical-2 { grid-row: span 2; }
+.foto-horizontal-2 { grid-column: span 1; }
 
 /* ======================================================= */
 /* 7. RESPONSIVIDADE (MOBILE METRICS)                      */
@@ -397,10 +374,7 @@ h2 {
         gap: 12px;
     }
 
-    h1 {
-        font-size: 3rem;
-    }
-
+    h1 { font-size: 3rem; }
     h2 {
         border-left: none;
         padding-left: 0;
@@ -422,57 +396,48 @@ h2 {
         border-radius: 16px;
     }
 
-    .contador h3 {
-        font-size: 1.3rem;
-    }
-
-    #contador {
-        gap: 10px;
-    }
+    .contador h3 { font-size: 1.3rem; }
+    #contador { gap: 10px; }
 
     .tempo {
         width: 72px;        
         height: 72px;       
         border-radius: 15px; 
     }
-
-    .tempo span {
-        font-size: 1.4rem;  
-    }
-
-    .tempo p {
-        font-size: 0.6rem;  
-        letter-spacing: 0.5px;
-    }
+    
+    .tempo span { font-size: 1.4rem; }
+    .tempo p { font-size: 0.6rem; letter-spacing: 0.5px; }
 
     .nossa-historia {
-        grid-template-columns: 1fr; /* No celular vira uma coluna só */
+        grid-template-columns: 1fr !important; 
         gap: 30px;
         padding: 20px 0;
     }
     
     .historia-conteudo {
         text-align: center !important;
+        width: 100% !important;
     }
     
-    .historia-titulo {
-        font-size: 2.5rem;
-    }
+    .historia-titulo { font-size: 2.5rem; }
     
     .historia-texto {
         font-size: 1rem !important;
-        text-align: center !important; /* Força o alinhamento centralizado sem esticar as palavras */
+        text-align: center !important; 
         line-height: 1.7 !important;
-        padding: 0 5px;
+        padding: 0 15px !important; /* Cria resguardo lateral perfeito para as quebras */
+        word-break: break-word !important;
     }
     
+    /* CORREÇÃO DO BUG: Força o grid a virar uma coluna limpa e reta no celular */
     .historia-grid {
-        grid-template-columns: 1fr; /* Uma coluna no celular */
-        grid-auto-rows: 240px; /* Altura confortável para fotos no celular */
-        gap: 12px;
+        grid-template-columns: 1fr !important; 
+        grid-auto-rows: 250px !important; 
+        gap: 14px !important;
+        width: 100% !important;
     }
     
-    /* Reseta os efeitos de expansão de linhas/colunas do PC para não quebrar no celular */
+    /* CORREÇÃO DO BUG: Anula o esticamento assimétrico herdado do computador */
     .foto-vertical-1, .foto-vertical-2, .foto-horizontal-1, .foto-horizontal-2, .foto-quadrada-1, .foto-quadrada-2 {
         grid-row: span 1 !important;
         grid-column: span 1 !important;
@@ -482,29 +447,16 @@ h2 {
         margin-top: 25px;
         padding-top: 20px;
     }
-
-    .rodape-titulo {
-        font-size: 1.3rem;
-    }
-
-    .rodape-links {
-        flex-direction: row; 
-        gap: 20px;           
-    }
-
-    .divisor {
-        display: none; 
-    }
+    
+    .rodape-titulo { font-size: 1.3rem; }
+    .rodape-links { flex-direction: row; gap: 20px; }
+    .divisor { display: none; }
 }
 
 /* ======================================================= */
 /* 8. ANIMAÇÕES NATURAIS                                   */
 /* ======================================================= */
 @keyframes subirSuave {
-    from {
-        transform: translateY(50px); /* Começa 50px abaixo */
-    }
-    to {
-        transform: translateY(0); /* Sobe suavemente para a posição original */
-    }
+    from { transform: translateY(50px); }
+    to { transform: translateY(0); }
 }
