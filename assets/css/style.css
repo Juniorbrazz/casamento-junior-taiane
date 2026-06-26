@@ -459,9 +459,10 @@ h2 {
         font-size: 2.5rem;
     }
     
-    .historia-texto {
+   .historia-texto {
         font-size: 1rem;
-        text-align: center;
+        text-align: left; /* Remove o 'justify' que quebra o texto no celular */
+        line-height: 1.7;
     }
     
     /* AQUI ENTRA SEU NOVO BLOCO ATUALIZADO PARA O CELULAR */
