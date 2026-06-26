@@ -277,6 +277,128 @@ h2 {
 }
 
 /* ======================================================= */
+/* 6.5 SEÇÃO NOSSA HISTÓRIA (ESTILO EDITORIAL)             */
+/* ======================================================= */
+
+.nossa-historia {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+    width: 100%;
+    padding: 40px 0;
+    border-bottom: 1px dashed var(--border-color);
+}
+
+.historia-conteudo {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    text-align: left;
+}
+
+.historia-subtitulo {
+    font-family: var(--font-sans);
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: var(--brand-color);
+    font-weight: 500;
+}
+
+.historia-titulo {
+    font-family: var(--font-serif);
+    font-size: 3.5rem;
+    font-weight: 600;
+    color: var(--text-main);
+    line-height: 1.1;
+    margin-bottom: 10px;
+}
+
+.historia-texto {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: var(--text-main);
+    font-weight: 300;
+    text-align: justify;
+}
+
+/* O Grid de Fotos Magnífico */
+.historia-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    width: 100%;
+}
+
+.foto-item {
+    overflow: hidden;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    transition: var(--transition-smooth);
+    background-color: #eee;
+}
+
+.foto-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.8s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+/* Efeito de Zoom interno de galeria de luxo */
+.foto-item:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+}
+
+.foto-item:hover img {
+    transform: scale(1.06);
+}
+
+/* Foto principal vertical ocupando duas linhas de altura */
+.foto-principal {
+    grid-row: span 2;
+    height: 100%;
+}
+
+/* Esconde as fotos extras por enquanto */
+.foto-oculta {
+    display: none;
+}
+
+/* RESPONSIVIDADE DA SEÇÃO (CELULAR) */
+@media (max-width: 768px) {
+    .nossa-historia {
+        grid-template-columns: 1fr; /* No celular vira uma coluna só */
+        gap: 40px;
+        padding: 20px 0;
+    }
+    
+    .historia-conteudo {
+        text-align: center;
+    }
+    
+    .historia-titulo {
+        font-size: 2.5rem;
+    }
+    
+    .historia-texto {
+        font-size: 1rem;
+        text-align: center;
+    }
+    
+    .historia-grid {
+        gap: 12px;
+    }
+    
+    .foto-principal {
+        grid-row: span 1; /* No celular desfaz o efeito vertical pesado */
+    }
+}
+
+/* ======================================================= */
 /* 7. RESPONSIVIDADE (MOBILE METRICS)                      */
 /* ======================================================= */
 
