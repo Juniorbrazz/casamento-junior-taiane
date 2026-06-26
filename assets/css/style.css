@@ -1,7 +1,7 @@
 /* ======================================================= */
 /* 1. VARIÁVEIS GLOBAIS E CONFIGURAÇÕES DE ELITE (:ROOT)   */
 /* ======================================================= */
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Montserrat:wght@300;400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght=400;600;700&family=Montserrat:wght@300;400;500&display=swap');
 
 :root {
     /* Paleta de Cores */
@@ -368,36 +368,6 @@ h2 {
     display: none;
 }
 
-/* RESPONSIVIDADE DA SEÇÃO (CELULAR) */
-@media (max-width: 768px) {
-    .nossa-historia {
-        grid-template-columns: 1fr; /* No celular vira uma coluna só */
-        gap: 40px;
-        padding: 20px 0;
-    }
-    
-    .historia-conteudo {
-        text-align: center;
-    }
-    
-    .historia-titulo {
-        font-size: 2.5rem;
-    }
-    
-    .historia-texto {
-        font-size: 1rem;
-        text-align: center;
-    }
-    
-    .historia-grid {
-        gap: 12px;
-    }
-    
-    .foto-principal {
-        grid-row: span 1; /* No celular desfaz o efeito vertical pesado */
-    }
-}
-
 /* ======================================================= */
 /* 7. RESPONSIVIDADE (MOBILE METRICS)                      */
 /* ======================================================= */
@@ -458,6 +428,33 @@ h2 {
     .tempo p {
         font-size: 0.6rem;  
         letter-spacing: 0.5px;
+    }
+
+    .nossa-historia {
+        grid-template-columns: 1fr; /* No celular vira uma coluna só */
+        gap: 40px;
+        padding: 20px 0;
+    }
+    
+    .historia-conteudo {
+        text-align: center;
+    }
+    
+    .historia-titulo {
+        font-size: 2.5rem;
+    }
+    
+    .historia-texto {
+        font-size: 1rem;
+        text-align: center;
+    }
+    
+    .historia-grid {
+        gap: 12px;
+    }
+    
+    .foto-principal {
+        grid-row: span 1; /* No celular desfaz o efeito vertical pesado */
     }
 
     .rodape-local {
