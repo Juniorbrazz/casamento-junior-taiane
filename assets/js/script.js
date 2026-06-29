@@ -21,7 +21,7 @@ function atualizarContador() {
 
     document.getElementById('dias').innerText = dias < 10 ? '0' + dias : dias;
     document.getElementById('horas').innerText = horas < 10 ? '0' + horas : horas;
-    document.getElementById('minutos').innerText = minutes < 10 ? '0' + minutos : minutos;
+    document.getElementById('minutos').innerText = minutos < 10 ? '0' + minutos : minutos;
     document.getElementById('segundos').innerText = segundos < 10 ? '0' + segundos : segundos;
 }
 
@@ -58,30 +58,14 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     /* ======================================================= */
-    /* 3. LÓGICA INTELIGENTE DO RSVP (ETAPA 4)                 */
+    /* 3. LÓGICA DO RSVP ENXUTO (ETAPA 4)                      */
     /* ======================================================= */
-    const seletorPresenca = document.getElementById('rsvp-presenca');
-    const grupoAcompanhantes = document.getElementById('grupo-acompanhantes');
     const formRSVP = document.getElementById('form-rsvp');
-
-    if (seletorPresenca && grupoAcompanhantes) {
-        // Monitora a escolha do convidado (Sim ou Não)
-        seletorPresenca.addEventListener('change', function() {
-            if (this.value === 'nao') {
-                // Esconde o campo de acompanhantes com suavidade
-                grupoAcompanhantes.style.display = 'none';
-                document.getElementById('rsvp-acompanhantes').value = '0'; // Reseta para 0
-            } else {
-                // Mostra o campo caso ele vá
-                grupoAcompanhantes.style.display = 'flex';
-            }
-        });
-    }
+    const seletorPresenca = document.getElementById('rsvp-presenca');
 
     if (formRSVP) {
-        // Monitora o clique no botão de enviar
         formRSVP.addEventListener('submit', function(e) {
-            e.preventDefault(); // Impede a página de recarregar
+            e.preventDefault(); // Impede o recarregamento da página
 
             const nome = document.getElementById('rsvp-nome').value;
             const presenca = seletorPresenca.value;
@@ -92,9 +76,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 alert(`Obrigado por nos avisar, ${nome}. Sentiremos sua falta na nossa celebração! ❤️`);
             }
 
-            // Limpa o formulário após o envio
-            formRSVP.reset();
-            grupoAcompanhantes.style.display = 'flex'; // Volta ao padrão visual
+            formRSVP.reset(); // Limpa os campos do formulário
         });
     }
 });
