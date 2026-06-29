@@ -58,14 +58,14 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     /* ======================================================= */
-    /* 3. LÓGICA DO RSVP ENXUTO (ETAPA 4)                      */
+    /* 3. LÓGICA DO RSVP ENXUTO                                */
     /* ======================================================= */
     const formRSVP = document.getElementById('form-rsvp');
     const seletorPresenca = document.getElementById('rsvp-presenca');
 
     if (formRSVP) {
         formRSVP.addEventListener('submit', function(e) {
-            e.preventDefault(); // Impede o recarregamento da página
+            e.preventDefault();
 
             const nome = document.getElementById('rsvp-nome').value;
             const presenca = seletorPresenca.value;
@@ -76,7 +76,33 @@ document.addEventListener('DOMContentLoaded', () => {
                 alert(`Obrigado por nos avisar, ${nome}. Sentiremos sua falta na nossa celebração! ❤️`);
             }
 
-            formRSVP.reset(); // Limpa os campos do formulário
+            formRSVP.reset();
+        });
+    }
+
+    /* ======================================================= */
+    /* 4. LÓGICA DO BOTÃO COPIAR PIX (ETAPA 5)                  */
+    /* ======================================================= */
+    const btnCopiarPix = document.getElementById('btn-copiar-pix');
+    
+    if (btnCopiarPix) {
+        btnCopiarPix.addEventListener('click', function() {
+            const chaveTexto = document.getElementById('pix-chave').innerText;
+
+            // Copia o texto para a área de transferência do celular/PC
+            navigator.clipboard.writeText(chaveTexto).then(() => {
+                // Efeito visual temporário mudando o texto do botão
+                btnCopiarPix.innerText = 'Chave Copiada! ✅';
+                btnCopiarPix.style.backgroundColor = '#27ae60'; // Fica verde temporariamente
+                
+                // Volta ao normal após 3 segundos
+                setTimeout(() => {
+                    btnCopiarPix.innerText = 'Copiar Chave PIX';
+                    btnCopiarPix.style.backgroundColor = ''; // Restaura o CSS original
+                }, 3000);
+            }).catch(err => {
+                console.error('Erro ao copiar: ', err);
+            });
         });
     }
 });
