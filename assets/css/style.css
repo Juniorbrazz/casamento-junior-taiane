@@ -469,6 +469,126 @@ h2 {
     max-height: 500px; /* Altura máxima para animação */
     padding: 20px;
 }
+/* ======================================================= */
+/* 6.9 SEÇÃO RSVP (FORMULÁRIO DE CONFIRMAÇÃO)               */
+/* ======================================================= */
+
+.rsvp-secao {
+    width: 100%;
+    padding: 60px 0;
+    text-align: center;
+    border-bottom: 1px dashed var(--border-color);
+}
+
+.rsvp-topo {
+    margin-bottom: 35px;
+}
+
+.rsvp-subtitulo {
+    font-family: var(--font-sans);
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: var(--brand-color);
+    font-weight: 500;
+}
+
+.rsvp-titulo {
+    font-family: var(--font-serif);
+    font-size: 3.5rem;
+    font-weight: 600;
+    color: var(--text-main);
+    line-height: 1.1;
+    margin-top: 10px;
+}
+
+.rsvp-frase {
+    margin-top: 15px;
+    font-size: 1.1rem;
+    color: var(--text-muted);
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    font-weight: 300;
+}
+
+/* Estrutura do Formulário */
+.rsvp-formulario {
+    max-width: 550px;
+    margin: 0 auto;
+    background: white;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 15px 45px rgba(0,0,0,0.05);
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.rsvp-grupo {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.rsvp-grupo label {
+    font-family: var(--font-sans);
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--text-main);
+    letter-spacing: 0.5px;
+}
+
+.rsvp-grupo input,
+.rsvp-grupo select {
+    width: 100%;
+    padding: 14px 16px;
+    border: 1px solid #e2d7cf;
+    border-radius: 10px;
+    background-color: #faf8f6;
+    font-family: var(--font-sans);
+    font-size: 1rem;
+    color: var(--text-main);
+    transition: var(--transition-smooth);
+    outline: none;
+}
+
+.rsvp-grupo input:focus,
+.rsvp-grupo select:focus {
+    border-color: var(--brand-color);
+    background-color: white;
+    box-shadow: 0 0 0 4px rgba(181, 110, 90, 0.1);
+}
+
+/* Botão de Envio de Elite */
+.btn-rsvp {
+    width: 100%;
+    padding: 16px;
+    background: linear-gradient(145deg, var(--brand-color), var(--brand-dark));
+    color: white;
+    border: none;
+    border-radius: 12px;
+    font-family: var(--font-sans);
+    font-size: 1.1rem;
+    font-weight: 500;
+    cursor: pointer;
+    box-shadow: 0 10px 25px rgba(181, 110, 90, 0.25);
+    transition: var(--transition-smooth);
+    margin-top: 10px;
+}
+
+.btn-rsvp:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 15px 35px rgba(181, 110, 90, 0.35);
+}
+
+/* Responsividade do Formulário */
+@media (max-width: 768px) {
+    .rsvp-titulo { font-size: 2.3rem; }
+    .rsvp-frase { font-size: 1rem; padding: 0 15px; }
+    .rsvp-formulario { padding: 25px 20px; width: 100%; }
+}
 
 /* ======================================================= */
 /* 7. RESPONSIVIDADE (MOBILE METRICS)                      */
