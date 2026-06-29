@@ -631,11 +631,11 @@ h2 {
 
     .tempo {
         width: 72px;        
-        height: 72px;       
+        height: 72px;        
         border-radius: 15px; 
     }
     
-    ... tempo span { font-size: 1.4rem; }
+    .tempo span { font-size: 1.4rem; }
     .tempo p { font-size: 0.6rem; letter-spacing: 0.5px; }
 
     .nossa-historia {
@@ -687,17 +687,135 @@ h2 {
     .dia-titulo { font-size: 2.3rem; }
     .acordeao-header { font-size: 1.05rem; padding: 15px; }
     .acordeao-body p { font-size: 0.95rem; }
+    
+    /* Ajustes do PIX no Celular */
+    .presentes-titulo { font-size: 2.5rem; }
+    .pix-card { padding: 20px; width: 100%; }
+    #pix-chave { font-size: 1.1rem; }
 }
 
-//* ======================================================= */
+/* ======================================================= */
+/* 7.5 SEÇÃO PRESENTES / PIX DIRETO (MINIMALISTA)          */
+/* ======================================================= */
+.presentes-secao {
+    width: 100%;
+    padding: 60px 0;
+    text-align: center;
+}
+
+.presentes-topo {
+    margin-bottom: 35px;
+}
+
+.presentes-subtitulo {
+    font-family: var(--font-sans);
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: var(--brand-color);
+    font-weight: 500;
+}
+
+.presentes-titulo {
+    font-family: var(--font-serif);
+    font-size: 3.5rem;
+    font-weight: 600;
+    color: var(--text-main);
+    line-height: 1.1;
+    margin-top: 10px;
+}
+
+.presentes-frase {
+    margin-top: 15px;
+    font-size: 1.1rem;
+    color: var(--text-muted);
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    font-weight: 300;
+}
+
+/* Card do PIX Sem Logo Oficial (Mais Editorial e Clean) */
+.pix-card {
+    background-color: white;
+    border: 1px solid #e2d7cf;
+    border-radius: 20px;
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 40px;
+    box-shadow: 0 15px 45px rgba(0, 0, 0, 0.04);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+}
+
+.pix-info {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 10px;
+    text-align: center;
+}
+
+.pix-label, .pix-titular-label {
+    font-family: var(--font-sans);
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--text-muted);
+    font-weight: 500;
+}
+
+#pix-chave {
+    font-size: 1.4rem;
+    color: var(--text-main);
+    font-family: var(--font-sans);
+    font-weight: 600;
+    background-color: #faf8f6;
+    padding: 12px 20px;
+    border-radius: 10px;
+    border: 1px dashed var(--border-color);
+    word-break: break-all;
+}
+
+.pix-titular-nome {
+    font-size: 1.1rem;
+    color: var(--text-main);
+    font-weight: 400;
+}
+
+/* Botão de Copiar */
+.btn-copiar {
+    width: 100%;
+    padding: 16px;
+    background: linear-gradient(145deg, var(--brand-color), var(--brand-dark));
+    color: white;
+    border: none;
+    border-radius: 12px;
+    font-family: var(--font-sans);
+    font-size: 1.1rem;
+    font-weight: 500;
+    cursor: pointer;
+    box-shadow: 0 10px 25px rgba(181, 110, 90, 0.25);
+    transition: var(--transition-smooth);
+}
+
+.btn-copiar:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 15px 35px rgba(181, 110, 90, 0.35);
+}
+
+/* ======================================================= */
 /* 8. ANIMAÇÕES NATURAIS (SCROLL REVEAL)                   */
 /* ======================================================= */
 
 /* Estado inicial (escondido e levemente deslocado) */
 .reveal {
     opacity: 0;
-    transform: translateY(30px);
-    transition: opacity 1s ease-out, transform 1s ease-out;
+    transform: translateY(40px);
+    transition: opacity 1.2s cubic-bezier(0.25, 1, 0.5, 1), transform 1.2s cubic-bezier(0.25, 1, 0.5, 1);
+    will-change: transform, opacity;
 }
 
 /* Estado final (visível e na posição original) */
