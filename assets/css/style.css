@@ -31,16 +31,13 @@ html {
     scroll-behavior: smooth;
 }
 
-/* Fundo e Base da Página */
+/* Fundo e Base da Página - AJUSTADO */
 body {
     background-color: var(--bg-primary);
     color: var(--text-main);
     font-family: var(--font-sans);
-    min-height: 100vh;
-    padding: 60px 20px 20px 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    min-height: auto; /* Remove a altura fixa que estica a página */
+    padding: 60px 20px; /* Padding equilibrado no topo e na base */
 }
 
 /* ======================================================= */
@@ -51,9 +48,10 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 35px;
+    gap: 15px; /* Reduzido de 35px para aproximar as seções naturalmente */
     width: 100%;
     max-width: 1200px;
+    margin: 0 auto; /* Centraliza a estrutura inteira no PC */
     animation: subirSuave 2.8s cubic-bezier(0.25, 1, 0.5, 1);
     will-change: transform;
 }
