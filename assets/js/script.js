@@ -106,3 +106,18 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 });
+
+/* ======================================================= */
+/* 5. EFEITO DE ANIMAÇÃO (SCROLL REVEAL)                   */
+/* ======================================================= */
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('active');
+        }
+    });
+}, { threshold: 0.1 }); // Começa a animar quando 10% da seção aparece
+
+// Elementos que receberão a animação
+const hiddenElements = document.querySelectorAll('.reveal');
+hiddenElements.forEach((el) => observer.observe(el));
