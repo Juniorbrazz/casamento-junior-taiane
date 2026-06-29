@@ -689,10 +689,19 @@ h2 {
     .acordeao-body p { font-size: 0.95rem; }
 }
 
+//* ======================================================= */
+/* 8. ANIMAÇÕES NATURAIS (SCROLL REVEAL)                   */
 /* ======================================================= */
-/* 8. ANIMAÇÕES NATURAIS                                   */
-/* ======================================================= */
-@keyframes subirSuave {
-    from { transform: translateY(50px); }
-    to { transform: translateY(0); }
+
+/* Estado inicial (escondido e levemente deslocado) */
+.reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+/* Estado final (visível e na posição original) */
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
 }
