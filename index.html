@@ -147,7 +147,54 @@
             </div>
         </div>
     </section>
+<!-- ... (fim da seção Nossa História) ... -->
+    </section>
 
+    <!-- COLE AQUI A NOVA SEÇÃO DE PRESENTES -->
+    <section class="lista-presentes">
+        <div class="presentes-topo">
+            <h3 class="presentes-subtitulo">Lista de Presentes</h3>
+            <h2 class="presentes-titulo">Categorias de Presentes</h2>
+            <div class="filtros-container">
+                <button class="filtro-btn active" data-filter="todos">Todos</button>
+                <button class="filtro-btn" data-filter="cozinha">Cozinha</button>
+                <button class="filtro-btn" data-filter="sala">Sala</button>
+                <button class="filtro-btn" data-filter="quarto">Quarto</button>
+                <button class="filtro-btn" data-filter="banheiro">Banheiro</button>
+                <button class="filtro-btn" data-filter="diversos">Diversos</button>
+            </div>
+        </div>
+
+        <div class="produtos-grid" id="produtos-grid">
+            <div class="produto-card" data-categoria="cozinha">
+                <div class="produto-img">🍳</div>
+                <h3>Jogo de Panelas</h3>
+                <button class="btn-presentear" onclick="abrirModal('Jogo de Panelas')">Quero Presentear</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- O MODAL TAMBÉM DEVE SER COLADO, MAS PREFERENCIALMENTE LOGO ANTES DO FECHAMENTO DA DIV CONTAINER -->
+    <div id="modal-presente" class="modal">
+        <div class="modal-content">
+            <span class="fechar-modal">&times;</span>
+            <h2 id="modal-titulo">Confirmar Presente</h2>
+            <form id="form-presente">
+                <input type="text" placeholder="Seu nome completo" required>
+                <textarea placeholder="Mensagem carinhosa (opcional)"></textarea>
+                <div class="opcoes-entrega">
+                    <label><input type="radio" name="entrega" value="entregar" checked> Vou entregar o presente</label>
+                    <label><input type="radio" name="entrega" value="pix"> Vou enviar via Pix</label>
+                </div>
+                <a href="#" id="link-loja" class="btn-loja" target="_blank">Ver na loja →</a>
+                <button type="submit" class="btn-confirmar">Confirmar Presente</button>
+            </form>
+        </div>
+    </div>
+
+    <section class="grande-dia">
+    <!-- ... (continua com a seção O Grande Dia) ... -->
+        
     <!-- ======================================================= -->
     <!-- ETAPA 5: PRESENTES / PIX DIRETO                         -->
     <!-- ======================================================= -->
