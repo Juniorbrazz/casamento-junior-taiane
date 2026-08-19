@@ -116,8 +116,49 @@ const observer = new IntersectionObserver((entries) => {
             entry.target.classList.add('active');
         }
     });
-}, { threshold: 0.1 }); // Começa a animar quando 10% da seção aparece
+}, { threshold: 0.1 }); 
 
-// Elementos que receberão a animação
 const hiddenElements = document.querySelectorAll('.reveal');
 hiddenElements.forEach((el) => observer.observe(el));
+
+
+/* ======================================================= */
+/* 6. LISTA DE PRESENTES E MODAL                          */
+/* ======================================================= */
+// Filtros de Presentes
+const filtros = document.querySelectorAll('.filtro-btn');
+const produtos = document.querySelectorAll('.produto-card');
+
+filtros.forEach(btn => {
+    btn.addEventListener('click', () => {
+        document.querySelector('.filtro-btn.active').classList.remove('active');
+        btn.classList.add('active');
+        
+        const categoria = btn.getAttribute('data-filter');
+        produtos.forEach(card => {
+            card.style.display = (categoria === 'todos' || card.getAttribute('data-categoria') === categoria) ? 'block' : 'none';
+        });
+    });
+});
+
+// Modal de Presentes
+const modal = document.getElementById('modal-presente');
+
+// Função para abrir o modal
+window.abrirModal = (titulo) => {
+    document.getElementById('modal-titulo').innerText = titulo;
+    modal.style.display = 'flex';
+};
+
+// Fechar ao clicar no X
+document.querySelector('.fechar-modal').onclick = () => modal.style.display = 'none';
+
+// Fechar ao clicar fora do modal
+window.onclick = (event) => { if (event.target == modal) modal.style.display = 'none'; };
+
+// Submissão do Formulário de Presente
+document.getElementById('form-presente').addEventListener('submit', (e) => {
+    e.preventDefault();
+    alert('Obrigado pelo seu carinho e pelo presente!');
+    modal.style.display = 'none';
+});
