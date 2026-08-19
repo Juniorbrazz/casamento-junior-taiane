@@ -135,8 +135,8 @@
                     <p>Por ser uma região cercada por mata e de maior altitude no Rio de Janeiro, o clima no Alto da Boa Vista costuma ser um pouco mais fresco no final da tarde. Vale a pena levar um agasalho leve por garantia.</p>
                 </div>
             </div>
-            
- <div class="acordeao-item">
+
+            <div class="acordeao-item">
                 <button class="acordeao-header">
                     <span>Presentes</span>
                     <span class="icone-seta">▶</span>
@@ -146,12 +146,11 @@
                 </div>
             </div>
         </div>
-        
-    </section>
-<!-- ... (fim da seção Nossa História) ... -->
     </section>
 
-    <!-- COLE AQUI A NOVA SEÇÃO DE PRESENTES -->
+    <!-- ======================================================= -->
+    <!-- LISTA DE PRESENTES POR CATEGORIAS (COLOCADO AQUI)        -->
+    <!-- ======================================================= -->
     <section class="lista-presentes">
         <div class="presentes-topo">
             <h3 class="presentes-subtitulo">Lista de Presentes</h3>
@@ -172,13 +171,31 @@
                 <h3>Jogo de Panelas</h3>
                 <button class="btn-presentear" onclick="abrirModal('Jogo de Panelas')">Quero Presentear</button>
             </div>
+
+            <div class="produto-card" data-categoria="sala">
+                <div class="produto-img">🛋️</div>
+                <h3>Aparelho de Jantar</h3>
+                <button class="btn-presentear" onclick="abrirModal('Aparelho de Jantar')">Quero Presentear</button>
+            </div>
+
+            <div class="produto-card" data-categoria="quarto">
+                <div class="produto-img">🛏️</div>
+                <h3>Jogo de Lençóis</h3>
+                <button class="btn-presentear" onclick="abrirModal('Jogo de Lençóis')">Quero Presentear</button>
+            </div>
+
+            <div class="produto-card" data-categoria="banheiro">
+                <div class="produto-img">🚿</div>
+                <h3>Jogo de Toalhas</h3>
+                <button class="btn-presentear" onclick="abrirModal('Jogo de Toalhas')">Quero Presentear</button>
+            </div>
         </div>
     </section>
 
-    <!-- O MODAL TAMBÉM DEVE SER COLADO, MAS PREFERENCIALMENTE LOGO ANTES DO FECHAMENTO DA DIV CONTAINER -->
+    <!-- MODAL DE CONFIRMAÇÃO DE PRESENTE -->
     <div id="modal-presente" class="modal">
         <div class="modal-content">
-            <span class="fechar-modal">&times;</span>
+            <span class="fechar-modal" onclick="fecharModal()">&times;</span>
             <h2 id="modal-titulo">Confirmar Presente</h2>
             <form id="form-presente">
                 <input type="text" placeholder="Seu nome completo" required>
@@ -193,9 +210,6 @@
         </div>
     </div>
 
-    <section class="grande-dia">
-    <!-- ... (continua com a seção O Grande Dia) ... -->
-        
     <!-- ======================================================= -->
     <!-- ETAPA 5: PRESENTES / PIX DIRETO                         -->
     <!-- ======================================================= -->
@@ -208,20 +222,19 @@
             </p>
         </div>
 
-       <div class="pix-card">
-    <!-- Removeu a imagem colorida e manteve apenas o título sutil -->
-    <div class="pix-info">
-        <span class="pix-label">Chave PIX (Celular)</span>
-        <strong id="pix-chave">21999999999</strong> 
-        
-        <span class="pix-titular-label">Titular da Conta</span>
-        <span class="pix-titular-nome">Junior / Taiane</span> 
-    </div>
+        <div class="pix-card">
+            <div class="pix-info">
+                <span class="pix-label">Chave PIX (Celular)</span>
+                <strong id="pix-chave">21999999999</strong>    
+                
+                <span class="pix-titular-label">Titular da Conta</span>
+                <span class="pix-titular-nome">Junior / Taiane</span>    
+            </div>
 
-    <button id="btn-copiar-pix" class="btn-copiar">
-        Copiar Chave PIX
-    </button>
-</div>
+            <button id="btn-copiar-pix" class="btn-copiar">
+                Copiar Chave PIX
+            </button>
+        </div>
     </section>
 
     <!-- ======================================================= -->
@@ -258,6 +271,7 @@
         </form>
     </section>
 
+    <!-- RODAPÉ -->
     <footer class="rodape-local">
         <div class="rodape-conteudo">
             <h4 class="rodape-titulo">Cerimônia e Festa</h4>
