@@ -805,50 +805,248 @@ h2 {
     #pix-chave { font-size: 1.15rem; padding: 10px; }
 }
 /* ======================================================= */
-/* 7.8 SEÇÃO PRESENTES POR CATEGORIAS                      */
+/* 7.8 SEÇÃO PRESENTES POR CATEGORIAS & MODAL DE ELITE     */
 /* ======================================================= */
-.lista-presentes { width: 100%; text-align: center; padding: 40px 0; border-bottom: 1px dashed var(--border-color); }
-
-.filtros-container { display: flex; justify-content: center; gap: 10px; margin-bottom: 30px; flex-wrap: wrap; }
-
-.filtro-btn { 
-    padding: 10px 20px; 
-    border-radius: 20px; 
-    border: 1px solid var(--border-color); 
-    background: white; 
-    cursor: pointer; 
-    transition: var(--transition-smooth); 
-    font-family: var(--font-sans);
+.lista-presentes {
+    width: 100%;
+    text-align: center;
+    padding: 60px 0;
+    border-bottom: 1px dashed var(--border-color);
 }
 
-.filtro-btn.active { background: var(--brand-color); color: white; border-color: var(--brand-color); }
+.filtros-container {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+}
 
-.produtos-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; max-width: 900px; margin: 0 auto; }
-
-.produto-card { background: white; padding: 20px; border-radius: 15px; border: 1px solid #eee; box-shadow: 0 5px 15px rgba(0,0,0,0.05); transition: var(--transition-smooth); }
-
-.produto-img { font-size: 3rem; margin-bottom: 10px; }
-
-.btn-presentear { 
-    width: 100%; 
-    padding: 12px; 
-    background: var(--brand-color); 
-    color: white; 
-    border: none; 
-    border-radius: 8px; 
-    cursor: pointer; 
-    margin-top: 15px; 
+.filtro-btn {
+    padding: 12px 24px;
+    border-radius: 25px;
+    border: 1px solid var(--border-color);
+    background: white;
+    color: var(--text-main);
+    cursor: pointer;
     font-family: var(--font-sans);
+    font-size: 0.95rem;
+    font-weight: 500;
+    transition: var(--transition-smooth);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+}
+
+.filtro-btn:hover {
+    border-color: var(--brand-color);
+    transform: translateY(-2px);
+}
+
+.filtro-btn.active {
+    background: linear-gradient(145deg, var(--brand-color), var(--brand-dark));
+    color: white;
+    border-color: transparent;
+    box-shadow: 0 6px 18px rgba(181, 110, 90, 0.3);
+}
+
+.produtos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 25px;
+    max-width: 950px;
+    margin: 0 auto;
+}
+
+.produto-card {
+    background: white;
+    padding: 25px;
+    border-radius: 20px;
+    border: 1px solid #e2d7cf;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.04);
+    transition: var(--transition-smooth);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.produto-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+}
+
+.produto-img {
+    font-size: 3.5rem;
+    margin-bottom: 15px;
+}
+
+.produto-card h3 {
+    font-family: var(--font-sans);
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: var(--text-main);
+    margin-bottom: 15px;
+}
+
+.btn-presentear {
+    width: 100%;
+    padding: 12px;
+    background: linear-gradient(145deg, var(--brand-color), var(--brand-dark));
+    color: white;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    font-family: var(--font-sans);
+    font-size: 0.95rem;
+    font-weight: 500;
+    transition: var(--transition-smooth);
+    box-shadow: 0 4px 15px rgba(181, 110, 90, 0.2);
+}
+
+.btn-presentear:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(181, 110, 90, 0.3);
+}
+
+/* --- ESTILIZAÇÃO DO MODAL DE ELITE --- */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(74, 58, 50, 0.6);
+    backdrop-filter: blur(4px);
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.modal-content {
+    background: white;
+    padding: 40px 30px;
+    border-radius: 24px;
+    max-width: 450px;
+    width: 90%;
+    position: relative;
+    text-align: center;
+    box-shadow: 0 25px 60px rgba(0,0,0,0.2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.fechar-modal {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 1.8rem;
+    cursor: pointer;
+    color: var(--text-muted);
+    transition: color 0.3s;
+}
+
+.fechar-modal:hover {
+    color: var(--text-main);
+}
+
+.modal-content h2 {
+    font-family: var(--font-serif);
+    font-size: 2.2rem;
+    color: var(--text-main);
+    margin-bottom: 25px;
+    width: 100%;
+    text-align: center;
+    border: none !important;
+    padding: 0 !important;
+}
+
+#form-presente {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    text-align: left;
+}
+
+#form-presente input[type="text"],
+#form-presente textarea {
+    width: 100%;
+    padding: 14px 16px;
+    border: 1px solid #e2d7cf;
+    border-radius: 12px;
+    background-color: #faf8f6;
+    font-family: var(--font-sans);
+    font-size: 0.95rem;
+    color: var(--text-main);
+    outline: none;
     transition: var(--transition-smooth);
 }
 
-.btn-presentear:hover { background: var(--brand-dark); transform: translateY(-2px); }
+#form-presente input[type="text"]:focus,
+#form-presente textarea:focus {
+    border-color: var(--brand-color);
+    background-color: white;
+    box-shadow: 0 0 0 4px rgba(181, 110, 90, 0.1);
+}
 
-/* Ajuste fino no Modal */
-.modal { display: none; position: fixed; top:0; left:0; width:100%; height:100%; background: rgba(0,0,0,0.6); justify-content: center; align-items: center; z-index: 1000; }
-.modal-content { background: white; padding: 30px; border-radius: 20px; max-width: 400px; width: 90%; position: relative; text-align: center; }
-.fechar-modal { position: absolute; top: 10px; right: 20px; font-size: 2rem; cursor: pointer; color: var(--text-muted); }
-.btn-confirmar { width: 100%; padding: 12px; background: var(--brand-color); color: white; border: none; border-radius: 8px; margin-top: 15px; cursor: pointer; font-family: var(--font-sans); }
+#form-presente textarea {
+    resize: vertical;
+    min-height: 90px;
+}
+
+.opcoes-entrega {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    margin: 10px 0;
+    font-size: 0.9rem;
+    color: var(--text-main);
+}
+
+.opcoes-entrega label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+}
+
+.btn-loja {
+    text-align: center;
+    display: block;
+    color: var(--brand-color);
+    font-size: 0.9rem;
+    text-decoration: none;
+    font-weight: 500;
+    margin: 5px 0 10px 0;
+    transition: color 0.3s;
+}
+
+.btn-loja:hover {
+    color: var(--brand-dark);
+    text-decoration: underline;
+}
+
+.btn-confirmar {
+    width: 100%;
+    padding: 14px;
+    background: linear-gradient(145deg, var(--brand-color), var(--brand-dark));
+    color: white;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    font-family: var(--font-sans);
+    font-size: 1rem;
+    font-weight: 500;
+    box-shadow: 0 8px 20px rgba(181, 110, 90, 0.25);
+    transition: var(--transition-smooth);
+    margin-top: 10px;
+}
+
+.btn-confirmar:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 25px rgba(181, 110, 90, 0.35);
+}
 
 /* ======================================================= */
 /* 8. ANIMAÇÕES NATURAIS (SCROLL REVEAL)                   */
